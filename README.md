@@ -6,6 +6,10 @@ the original project history and attribution while the Android platform,
 reliability and diagnostics layers are modernized. Development notes are in
 [`docs/README.md`](docs/README.md).
 
+The current SnoSoulEV build is offline-first: it has no Android Internet
+permission, cloud upload, or bundled charger-station service. Vehicle and
+optional location data remain on the device.
+
 ## Upstream project description
 
 Soul EV Spy is an Android application that allows you to read out some useful information out of your 

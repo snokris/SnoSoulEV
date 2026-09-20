@@ -24,7 +24,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.evranger.soulevspy.advisor.ChargeStations;
 import com.evranger.soulevspy.advisor.EnergyWatcher;
 import com.evranger.soulevspy.car_model.ModelSpecificCommands;
 import com.evranger.soulevspy.fragment.BatteryCellmapFragment;
@@ -44,7 +43,6 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.evranger.elm327.log.CommLog;
 import com.evranger.soulevspy.R;
 
-import com.evranger.soulevspy.fragment.ChargerLocationsFragment;
 import com.evranger.soulevspy.fragment.BatteryFragment;
 import com.evranger.soulevspy.fragment.CarFragment;
 import com.evranger.soulevspy.fragment.DashboardFragment;
@@ -73,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
         Car,
         VehicleMotorControlUnit,
         OnBoarCharger,
-        ChargerLocations,
         Energy,
         Battery,
         BatteryCellmap,
@@ -108,7 +105,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
             "android.permission.BLUETOOTH_SCAN"
     };
     public static final int RC_CHOOSE_FILE = 123;
-    private ChargeStations mChargeStations = null;
     private BatteryStats mBatteryStats = null;
     private PowerConnectionReceiver mPowerConnectionReceiver = null;
     private EnergyWatcher mEnergyWatcher = null;
@@ -193,10 +189,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
 
         // Model specific loop commands
         mModelSpecificCommands = new ModelSpecificCommands(mSharedPreferences);
-
-        // ChargeStations
-        mChargeStations = new ChargeStations(getBaseContext(),mModelSpecificCommands.hasChademo(), mModelSpecificCommands.hasCCS(), mModelSpecificCommands.getFullRange());
-
         // Bluetooth OBD2 Device
         mDevice = new OBD2Device(mSharedPreferences, mModelSpecificCommands.getLoopCommands());
 
@@ -228,16 +220,15 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
                 .addDrawerItems(
                         bluetoothEnable,
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.ChargerLocations.ordinal()).withName(R.string.action_charger_locations).withIcon(FontAwesome.Icon.faw_map),
                         new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Energy.ordinal()).withName(R.string.action_energy).withIcon(FontAwesome.Icon.faw_list),
                         new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.BatteryCellmap.ordinal()).withName(R.string.action_battery_cellmap).withIcon(FontAwesome.Icon.faw_table),
                         new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Battery.ordinal()).withName(R.string.action_battery).withIcon(FontAwesome.Icon.faw_battery_three_quarters),
                         new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Car.ordinal()).withName(R.string.action_car_information).withIcon(FontAwesome.Icon.faw_car),
-                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.VehicleMotorControlUnit.ordinal()).withName(R.string.action_vmcu_information).withIcon(FontAwesome.Icon.faw_dot_circle_o),
+                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.VehicleMotorControlUnit.ordinal()).withName(R.string.action_vmcu_information).withIcon(FontAwesome.Icon.faw_dot_circle),
                         new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.OnBoarCharger.ordinal()).withName(R.string.action_obc_information).withIcon(FontAwesome.Icon.faw_plug),
-                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Ldc.ordinal()).withName(R.string.action_ldc).withIcon(FontAwesome.Icon.faw_battery_4),
-                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Tires.ordinal()).withName(R.string.action_tires).withIcon(FontAwesome.Icon.faw_circle_o_notch),
-                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Gps.ordinal()).withName(R.string.action_gps).withIcon(FontAwesome.Icon.faw_clock_o),
+                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Ldc.ordinal()).withName(R.string.action_ldc).withIcon(FontAwesome.Icon.faw_battery_full),
+                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Tires.ordinal()).withName(R.string.action_tires).withIcon(FontAwesome.Icon.faw_circle_notch),
+                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Gps.ordinal()).withName(R.string.action_gps).withIcon(FontAwesome.Icon.faw_clock),
 //                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.Dashboard.ordinal()).withName(R.string.action_dashboard).withIcon(FontAwesome.Icon.faw_dashboard).withEnabled(false),
 //                        new PrimaryDrawerItem().withIdentifier(NavigationDrawerItem.DtcCodes.ordinal()).withName(R.string.action_dtc).withIcon(FontAwesome.Icon.faw_stethoscope).withEnabled(false),
                         new DividerDrawerItem(),
@@ -261,8 +252,7 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
 
         //only set the active selection or active profile if we do not recreate the activity
         if (savedInstanceState == null) {
-            // set the selection to the item with the identifier 2
-            mDrawer.setSelection(NavigationDrawerItem.ChargerLocations.ordinal(), true);
+            mDrawer.setSelection(NavigationDrawerItem.Energy.ordinal(), true);
         }
     }
 
@@ -310,7 +300,7 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
             Intent intent = null;
             Fragment fragment = null;
             try {
-                NavigationDrawerItem item = NavigationDrawerItem.values()[drawerItem.getIdentifier()];
+                NavigationDrawerItem item = NavigationDrawerItem.values()[(int) drawerItem.getIdentifier()];
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                 switch (item) {
                     case Bluetooth:
@@ -319,10 +309,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
                         break;
                     case Gps:
                         fragment = new GpsFragment();
-                        break;
-                    case ChargerLocations:
-                        fragment = new ChargerLocationsFragment();
-                        wantScreenOn();
                         break;
                     case Energy:
                         fragment = new EnergyFragment();
@@ -497,7 +483,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
         super.onDestroy();
         mPosition.listen(false);
         bluetoothDeviceConnect(false);
-        if (mChargeStations != null) mChargeStations.onDestroy();
         if (mEnergyWatcher != null) mEnergyWatcher.finalize();
         String fullpath = CurrentValuesSingleton.getInstance().closeLog();
     }
@@ -581,9 +566,7 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
     }
 
     private void onDialogClosed() {
-        if (currentDialog == R.string.dialog_authenticate_to_upload_title) {
-//            authenticate();
-        } else if (currentDialog == R.string.dialog_select_car_model_title || currentDialog == R.string.dialog_select_bluetooth_dongle_title) {
+        if (currentDialog == R.string.dialog_select_car_model_title || currentDialog == R.string.dialog_select_bluetooth_dongle_title) {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             MainActivity.this.startActivity(intent);
         }

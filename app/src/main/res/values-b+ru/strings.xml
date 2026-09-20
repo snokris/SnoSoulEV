@@ -18,7 +18,6 @@
 
     <string name="action_energy">Энергия</string>
 
-    <string name="action_charger_locations">DC-зарядные устройства (Нажмите для инфо)</string>
 
     <string name="action_ldc">12V Аккумулятор</string>
 
@@ -128,11 +127,8 @@
 
 
 
-    <string name="title_pref_storage">Хранение данных</string>
 
-    <string name="pref_storage_upload_to_cloud">Загрузить данные на облако (возможно платно!)</string>
 
-    <string name="pref_storage_save_in_downloads_dir">Сохранить данные в папке Загрузки</string>
 
 
 
@@ -164,29 +160,13 @@
 
 
 
-    <string name="dialog_warn_data_not_saved_title">"Осторожно: Данные не будут сохранены!"</string>
 
-    <string name="dialog_warn_data_not_saved_message">Не отмеченно где сохранить:\n
-
-        \n
-
-        - Upload data to cloud (may incur charges!)\n
-
-        - Save data in Downloads dir\n
-
-        \n
-
-        Data will be read from car and displayed on screen, but not saved in files!\n
-
-        Click Ok to continue</string>
 
     <string name="dialog_Ok">Ok</string>
 
 
 
-    <string name="dialog_authenticate_to_upload_title">Авторизация необходима</string>
 
-    <string name="dialog_authenticate_to_upload_message">Нужно авторизироваться чтоб загрузить данные.</string>
 
 
 
@@ -236,7 +216,6 @@
     <!-- File names -->
 
 
-    <!-- ChargerLocations -->
 
 
     <!-- Car Information (VIN decoding) -->
@@ -281,21 +260,13 @@
 
 
 
-    <!-- DC chargers page -->
 
-    <string name="from_charger_locations_provider">От elmobil.ru: </string>
 
-    <string name="click_to_see_details_in_browser">Нажмите на текст чтоб открыть в браузере</string>
 
-    <string name="car_estimated_remaining_range_km">Расчетный запас хода (km)</string>
 
-    <string name="below_are_out_of_range">Ниже станции вне зоны запаса хода</string>
 
-    <string name="charge_point_verified">Проверенная станция</string>
 
-    <string name="straight_dist">Расстояние до станции:</string>
 
-    <string name="no_chargers_nearby">Нет быстрых зарядок!</string>
 
 
 

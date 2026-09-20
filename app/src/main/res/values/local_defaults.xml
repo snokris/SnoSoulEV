@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- The public baseline build never requires a private API key. -->
-    <string name="goingelectric_de_api_key" translatable="false"></string>
-</resources>

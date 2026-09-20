@@ -9,15 +9,18 @@ emulátor kell.
 
 ## 1. fázis – saját identitás és platformmodernizálás
 
-Státusz: folyamatban.
+Státusz: kész a forráskód és az automatizált ellenőrzések szintjén. A kiadás előtt
+még valós Android-eszközön kell ellenőrizni a navigációt és a Bluetooth-kapcsolódást.
 
 - [x] saját appnév, ikon és application ID;
 - [x] `targetSdk 35`, modern Bluetooth- és storage-engedélyek;
-- töltőállomás/felhő funkció végleges izolálása vagy eltávolítása;
-- régi UI-függőségek kontrollált frissítése;
-- kommunikációs viselkedés változatlanul hagyása.
+- [x] töltőállomás- és felhőfunkció eltávolítása;
+- [x] offline adatvédelmi tájékoztató, `INTERNET` engedély nélkül;
+- [x] régi UI-függőségek kontrollált frissítése;
+- [x] kommunikációs viselkedés változatlanul hagyása.
 
-Az identitás- és engedélydöntések: [[decisions/0002-sajat-identitas-es-engedelyek]].
+Kapcsolódó döntések: [[decisions/0002-sajat-identitas-es-engedelyek]] és
+[[decisions/0003-offline-elso-kiadas-es-ui-fuggosegek]].
 
 ## 2. fázis – anonimizált log-replay
 

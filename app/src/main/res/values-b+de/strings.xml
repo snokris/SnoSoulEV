@@ -17,7 +17,6 @@
 
     <string name="action_energy">Energie und Power</string>
 
-    <string name="action_charger_locations">DC-Lader (klicken für Details)</string>
 
     <string name="action_ldc">LDC 12 V Aux-Ladegerät</string>
 
@@ -112,9 +111,6 @@
     <string name="pref_scan_interval">Zeitintervall zwischen Scans (Sekunden)</string>
     <string name="pref_default_scan_interval">3.0</string>
 
-    <string name="title_pref_storage">Storage</string>
-    <string name="pref_storage_upload_to_cloud">Daten in die Cloud hochladen (kann Gebühren verursachen!)</string>
-    <string name="pref_storage_save_in_downloads_dir">Daten in Downloadsverzeichnis speichern</string>
 
     <string name="title_pref_about">Über</string>
     <string name="pref_about">Über SnoSoulEV</string>
@@ -143,29 +139,13 @@
 
 
 
-    <string name="dialog_warn_data_not_saved_title">"WARNUNG: Daten werden nicht gespeichert!"</string>
 
-    <string name="dialog_warn_data_not_saved_message">Keine dieser Einstellungen ist aktiviert:\n
-
-        \n
-
-        - Daten in die Cloud hochladen (kann Gebühren verursachen!)\n
-
-        - Daten in Downloadsverzeichnis speichern\n
-
-        \n
-
-        Die Daten werden aus dem Auto gelesen und auf dem Bildschirm angezeigt, aber nicht gespeichert!\n
-
-        Klicken Sie auf OK zum fortfahren</string>
 
     <string name="dialog_Ok">Ok</string>
 
 
 
-    <string name="dialog_authenticate_to_upload_title">Authentifizierung erforderlich</string>
 
-    <string name="dialog_authenticate_to_upload_message">Sie müssen sich authentifizieren, um Daten hochzuladen Daten. Sie werden aufgefordert, sich als nächstes anzumelden.</string>
 
     <string name="dialog_select_bluetooth_dongle_title">OBD-II-Dongle auswählen</string>
 
@@ -211,7 +191,6 @@
 
     <!-- File names -->
 
-    <!-- ChargerLocations -->
 
     <!-- Car Information (VIN decoding) -->
 
@@ -285,21 +264,13 @@
 
 
 
-    <!-- DC chargers page -->
 
-    <string name="from_charger_locations_provider">Von goingelectric.de: </string>
 
-    <string name="click_to_see_details_in_browser">Klicken Sie auf Text, um Details im Browser anzuzeigen</string>
 
-    <string name="car_estimated_remaining_range_km">Geschätzte verbleibende Reichweite (km)</string>
 
-    <string name="below_are_out_of_range">unterhalb des Bereiches!</string>
 
-    <string name="charge_point_verified">Verifiziert</string>
 
-    <string name="straight_dist">Luftlinie:</string>
 
-    <string name="no_chargers_nearby">Keine DC-Lader in der Nähe!</string>
 
 
 

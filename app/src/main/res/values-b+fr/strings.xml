@@ -9,7 +9,6 @@
     <string name="action_vmcu_information">Contrôle moteur</string>
     <string name="action_obc_information">Chargeur embarqué</string>
     <string name="action_energy">Énergie et puissance</string>
-    <string name="action_charger_locations">Chargeurs CC (Cliquez pour plus de détails)</string>
     <string name="action_ldc">LDC 12V Aux.chargeur</string>
     <string name="action_tires">Données sur les pneus</string>
     <string name="action_dashboard">Tableau de bord</string>
@@ -65,9 +64,6 @@
     <string name="pref_scan_interval">Intervalle entre les analyses (secondes)</string>
     <string name="pref_default_scan_interval">3.0</string>
 
-    <string name="title_pref_storage">Espace de stockage</string>
-    <string name="pref_storage_upload_to_cloud">Transférer des données dans le cloud (peut entraîner des frais!)</string>
-    <string name="pref_storage_save_in_downloads_dir">Sauvegarder les données dans le répertoire de téléchargements</string>
 
     <string name="title_pref_about">À propos</string>
     <string name="pref_about">À propos de SnoSoulEV</string>
@@ -85,18 +81,8 @@
     <string name="dialog_back_button_background">Arrière-plan</string>
     <string name="dialog_back_button_cancel">Canceller</string>
 
-    <string name="dialog_warn_data_not_saved_title">"AVERTISSEMENT: les données ne seront pas sauvegardées!</string>
-    <string name="dialog_warn_data_not_saved_message">Aucun de ces paramètres n\'est sélectionné:\n
-        \n
-        - Transférer des données dans le cloud (peut entraîner des frais!)\n
-        - Sauvegarder les données dans le répertoire de téléchargements\n
-        \n
-        Les données seront lues depuis la voiture et affichées à l\'écran, mais pas enregistrées dans des fichiers!\n
-        Cliquez sur OK pour continuer</string>
     <string name="dialog_Ok">Ok</string>
 
-    <string name="dialog_authenticate_to_upload_title">Authentification nécessaire</string>
-    <string name="dialog_authenticate_to_upload_message">Vous devez vous authentifier pour pouvoir télécharger des données. Vous serez invité à vous connecter ensuite.</string>
 
     <string name="dialog_select_bluetooth_dongle_title">Sélectionnez le dongle OBD-II</string>
     <string name="dialog_select_bluetooth_dongle_message">S\'il vous plaît sélectionnez votre dongle Bluetooth OBD-II dans les paramètres de l\'application</string>
@@ -156,21 +142,13 @@
     <string name="button_CellmapVoltage">Carte de tension</string>
 
 
-    <!-- DC chargers page -->
 
-    <string name="from_charger_locations_provider">From goingelectric.de: </string>
 
-    <string name="click_to_see_details_in_browser">Cliquer pour voir les dÈtails dans le navigateur</string>
 
-    <string name="car_estimated_remaining_range_km">Estimation de l\'autonomie restante (km)</string>
 
-    <string name="below_are_out_of_range">Ci-dessous, hors de portÈe!</string>
 
-    <string name="charge_point_verified">VÈrifiÈ</string>
 
-    <string name="straight_dist">Distance droite:</string>
 
-    <string name="no_chargers_nearby">Pas de chargeurs DC ‡ proximitÈ!</string>
 
 
 

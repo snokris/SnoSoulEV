@@ -8,7 +8,6 @@
     <string name="action_vmcu_information">Motorstyring</string>
     <string name="action_obc_information">Ombordlader (OBC)</string>
     <string name="action_energy">Energi og effekt</string>
-    <string name="action_charger_locations">Hurtigladere i nærheten</string>
     <string name="action_ldc">LDC 12 V-batterilader</string>
     <string name="action_tires">Hjuldata</string>
     <string name="action_dashboard">Dashboard</string>
@@ -64,9 +63,6 @@
     <string name="pref_scan_interval">Intervall mellom skanninger (sek)</string>
     <string name="pref_default_scan_interval">3.0</string>
 
-    <string name="title_pref_storage">Datafiler</string>
-    <string name="pref_storage_upload_to_cloud">Last opp filer til skyen (potensielle kostnader!)</string>
-    <string name="pref_storage_save_in_downloads_dir">Lagre data i Downloads-mappen</string>
 
     <string name="title_pref_about">Om SnoSoulEV</string>
     <string name="pref_about">Om SnoSoulEV</string>
@@ -84,18 +80,8 @@
     <string name="dialog_back_button_background">Bakgrunn</string>
     <string name="dialog_back_button_cancel">Avbryt</string>
 
-    <string name="dialog_warn_data_not_saved_title">ADVARSEL: Data blir ikke lagret!</string>
-    <string name="dialog_warn_data_not_saved_message">Ingen av disse innstillingene ble lagret:\n
-        \n
-        - Laste opp filer til skyen (potensielle kostnader!)\n
-        - Lagre data ukrypteret i Downloads-mappen\n
-        \n
-        Data vil bli innlest fra bilen og vist på skjermen, men vil ikke bli lagret i filer!\n
-        Klikk Ok for å fortsette</string>
     <string name="dialog_Ok">Ok</string>
 
-    <string name="dialog_authenticate_to_upload_title">Det er nødvendig å logge inn</string>
-    <string name="dialog_authenticate_to_upload_message">Du er nødt til at registrere deg og logge inn, for å kunne sende data til skyen. Derfor vil du bli bedt om å logge inn som neste trinn.</string>
 
     <string name="dialog_select_bluetooth_dongle_title">Velg OBD-II-enhet</string>
     <string name="dialog_select_bluetooth_dongle_message">Velg din OBD-II Bluetooth-enhet i innstillingene</string>
@@ -148,14 +134,6 @@
     <!-- Preferences -->
     <string name="enable_bluetooth_on_phone">Aktiver Bluetooth på denne enheten</string>
 
-    <!-- DC chargers page -->
-    <string name="from_charger_locations_provider">Fra goingelectric.de: </string>
-    <string name="click_to_see_details_in_browser">Klikk på teksten for å se detaljer i nettleser</string>
-    <string name="car_estimated_remaining_range_km">Bilens estimerte rekkevidde (km)</string>
-    <string name="below_are_out_of_range">Følgende er utenfor rekkevidde!</string>
-    <string name="charge_point_verified">Verifisert</string>
-    <string name="straight_dist">Luftlinje:</string>
-    <string name="no_chargers_nearby">Ingen hurtigladere i nærheten!</string>
 
     <!-- Car page -->
     <string name="battery_soh_source">Kilde for batteriets SOH</string>

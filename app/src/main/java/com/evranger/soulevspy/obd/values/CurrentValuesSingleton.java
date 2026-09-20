@@ -218,7 +218,7 @@ public class CurrentValuesSingleton {
                 }
                 SortedSet<String> keyset = new TreeSet<String>(mValues.keySet());
                 for (String key : keyset) {
-                    if (!mColumnNamesLogged.contains(key) && key != getPreferences().getContext().getResources().getString(R.string.col_chargers_locations)) {
+                    if (!mColumnNamesLogged.contains(key)) {
                         str.append(separator);
                         str.append("\"");
                         str.append(key);

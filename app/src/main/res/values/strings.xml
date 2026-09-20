@@ -8,7 +8,6 @@
     <string name="action_vmcu_information">Motor Control</string>
     <string name="action_obc_information">Onboard Charger</string>
     <string name="action_energy">Energy and power</string>
-    <string name="action_charger_locations">DC-chargers (Click for details)</string>
     <string name="action_ldc">LDC 12 V Aux charger</string>
     <string name="action_tires">Tire data</string>
     <string name="action_dashboard">Dashboard</string>
@@ -65,9 +64,6 @@
     <string name="pref_scan_interval">Interval between scans (seconds)</string>
     <string name="pref_default_scan_interval">3.0</string>
 
-    <string name="title_pref_storage">Storage</string>
-    <string name="pref_storage_upload_to_cloud">Upload data to cloud (may incur charges!)</string>
-    <string name="pref_storage_save_in_downloads_dir">Save data in Downloads dir</string>
 
     <string name="title_pref_about">About</string>
     <string name="pref_about">About SnoSoulEV</string>
@@ -85,18 +81,8 @@
     <string name="dialog_back_button_background">Background</string>
     <string name="dialog_back_button_cancel">Cancel</string>
 
-    <string name="dialog_warn_data_not_saved_title">"WARNING: Data will not be saved!"</string>
-    <string name="dialog_warn_data_not_saved_message">Neither of these Settings are checked:\n
-        \n
-        - Upload data to cloud (may incur charges!)\n
-        - Save data in Downloads dir\n
-        \n
-        Data will be read from car and displayed on screen, but not saved in files!\n
-        Click Ok to continue</string>
     <string name="dialog_Ok">Ok</string>
 
-    <string name="dialog_authenticate_to_upload_title">Authentication necessary</string>
-    <string name="dialog_authenticate_to_upload_message">You need to authenticate, in order to upload data. You will be requested to log in next.</string>
 
     <string name="dialog_select_bluetooth_dongle_title">Select OBD-II dongle</string>
     <string name="dialog_select_bluetooth_dongle_message">Please select your paired OBD-II bluetooth dongle in the app Settings</string>
@@ -121,11 +107,8 @@
     <string name="info_data_will_not_be_saved">Data will not be stored!</string>
 
     <!-- File names -->
-    <string name="file_chargerlocations_json" translatable="false">chargerlocations.json</string>
 
 
-    <!-- ChargerLocations -->
-    <string name="charger_locations_update_time_ms" translatable="false">charger_locations_update_time_ms</string>
 
     <!-- Car Information (VIN decoding) -->
     <string name="car_kia" translatable="false">Kia</string>
@@ -302,7 +285,6 @@
 
     <string name="col_watcher_consumption" translatable="false">calc.consumption</string>
 
-    <string name="col_chargers_locations" translatable="false">chargers.locations</string>
 
 
     <!-- Cellmap voltages -->
@@ -329,14 +311,6 @@
     <!-- Preferences -->
     <string name="enable_bluetooth_on_phone">Enable bluetooth on phone</string>
 
-    <!-- DC chargers page -->
-    <string name="from_charger_locations_provider">From goingelectric.de: </string>
-    <string name="click_to_see_details_in_browser">Click text to see details in browser</string>
-    <string name="car_estimated_remaining_range_km">Car estimated remaining range (km)</string>
-    <string name="below_are_out_of_range">Below are out of range!</string>
-    <string name="charge_point_verified">Verified</string>
-    <string name="straight_dist">Straight dist:</string>
-    <string name="no_chargers_nearby">No DC-chargers nearby!</string>
 
     <!-- Car page -->
     <string name="battery_soh_source">Battery SOH source</string>

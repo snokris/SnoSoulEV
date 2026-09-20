@@ -109,7 +109,6 @@ public class ReadLoop {
 //                res.getString(R.string.col_watcher_consumption),
 //                res.getString(R.string.col_nom_capacity_kWh),
 //                res.getString(R.string.col_orig_capacity_kWh),
-//                res.getString(R.string.charger_locations_update_time_ms),
                 res.getString(R.string.col_ldc_in_DC_voltage_V)));
         mColumnsToLog.addAll(Arrays.asList(res.getString(R.string.col_obc_ac_in_V),
                 res.getString(R.string.col_obc_dc_out_V),

@@ -12,13 +12,15 @@ olvashatók.
 - [[decisions/0001-projektmemoria]] – mi kerül Obsidianba, `AGENTS.md`-be és Gitbe
 - [[decisions/0002-sajat-identitas-es-engedelyek]] – appazonosító,
   Bluetooth- és tárhelydöntések
+- [[decisions/0003-offline-elso-kiadas-es-ui-fuggosegek]] – a hálózati
+  modul eltávolítása és a kompatibilis UI-függőségvonal
 
 ## Rövid projektazonosító
 
 - Upstream: `langemand/SoulEVSpy`
 - Kiinduló commit: `0a1cafb93a65d17e0c7e1bb3ad2bc9cb965d02a7`
 - Baseline ág: `modernize/build-baseline`
-- Aktív 1. fázis ág: `modernize/app-identity-permissions`
+- Aktív 1. fázis ág: `modernize/offline-ui-dependencies`
 - Alkalmazásnév: SnoSoulEV
 - Android application ID: `hu.snokris.snosoulev`
 - A Java/Android namespace átmenetileg `com.evranger.soulevspy`, hogy a

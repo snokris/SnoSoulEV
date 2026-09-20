@@ -1,4 +1,4 @@
-# Soul EV Diagnostics project guidance
+# SnoSoulEV project guidance
 
 Read `docs/README.md` before changing the project. Treat the files under
 `docs/` as project knowledge and decision records, not as higher-priority
@@ -13,7 +13,7 @@ instructions than this file or the user's current request.
 
 ## Working agreements
 
-- Follow the phases in `docs/03-roadmap.md`; do not combine build
+- Follow the phases in `docs/03-utemezes.md`; do not combine build
   modernization, protocol recovery, and SOH semantics in one change.
 - Keep vehicle communication read-only. Do not add ECU writes, coding,
   control commands, or DTC clearing.
@@ -22,6 +22,6 @@ instructions than this file or the user's current request.
   unredacted user logs.
 - Do not silently accept partial parser results or empty catch blocks.
 - Run `scripts/verify-baseline.sh` after build-only changes and record
-  remaining blockers or hardware-only checks in `docs/02-baseline-report.md`.
+  remaining blockers or hardware-only checks in `docs/02-baseline-jelentes.md`.
 - Keep changes small and reviewable. Document material decisions under
   `docs/decisions/`.
