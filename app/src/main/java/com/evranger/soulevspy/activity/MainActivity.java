@@ -9,8 +9,8 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.BatteryManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -59,13 +59,7 @@ import com.evranger.soulevspy.util.BatteryStats;
 import com.evranger.soulevspy.util.ClientSharedPreferences;
 import com.evranger.soulevspy.obd.values.CurrentValuesSingleton;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 /**
  *
@@ -103,18 +97,17 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
     private ReplayLoop mReplayLoop = null;
 
 
-    // Storage Permissions
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
-    };
     public static final int REQUEST_LOCATION = 2;
     public static String[] PERMISSIONS_LOCATION = {
+            Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.ACCESS_FINE_LOCATION
     };
+    public static final int REQUEST_BLUETOOTH = 3;
+    public static final String[] PERMISSIONS_BLUETOOTH = {
+            "android.permission.BLUETOOTH_CONNECT",
+            "android.permission.BLUETOOTH_SCAN"
+    };
     public static final int RC_CHOOSE_FILE = 123;
-    private int mRequested = 0;
     private ChargeStations mChargeStations = null;
     private BatteryStats mBatteryStats = null;
     private PowerConnectionReceiver mPowerConnectionReceiver = null;
@@ -137,27 +130,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
     }
 
     /**
-     * Checks if the app has permission to write to device storage
-     *
-     * If the app does not has permission then the user will be prompted to grant permissions
-     *
-     */
-    public void verifyStoragePermissions() {
-        // Check if we have write permission
-        int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
-        if (permission != PackageManager.PERMISSION_GRANTED) {
-            mRequested = REQUEST_EXTERNAL_STORAGE;
-            // We don't have permission so prompt the user
-            ActivityCompat.requestPermissions(
-                    this,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
-            );
-        }
-    }
-
-    /**
      * Checks if the app has permission to gps location
      *
      * If the app does not has permission then the user will be prompted to grant permissions
@@ -167,7 +139,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
         int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
-            mRequested = REQUEST_LOCATION;
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
                     this,
@@ -177,6 +148,23 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
         } else {
             return true;
         }
+    }
+
+    public static boolean hasBluetoothPermissions(android.content.Context context) {
+        return Build.VERSION.SDK_INT < Build.VERSION_CODES.S
+                || (ActivityCompat.checkSelfPermission(context, PERMISSIONS_BLUETOOTH[0])
+                == PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(context, PERMISSIONS_BLUETOOTH[1])
+                == PackageManager.PERMISSION_GRANTED);
+    }
+
+    public boolean verifyBluetoothPermissions() {
+        if (hasBluetoothPermissions(this)) {
+            return true;
+        }
+
+        ActivityCompat.requestPermissions(this, PERMISSIONS_BLUETOOTH, REQUEST_BLUETOOTH);
+        return false;
     }
 
     /**
@@ -192,8 +180,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        warningDialog(R.string.dialog_lite_splash_title, R.string.dialog_lite_splash_message);
 
         verifyLocationPermissions();
 
@@ -287,6 +273,10 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
         @Override
         public void onCheckedChanged(IDrawerItem drawerItem, CompoundButton buttonView, boolean isChecked) {
             if (isChecked) {
+                if (!verifyBluetoothPermissions()) {
+                    buttonView.setChecked(false);
+                    return;
+                }
                 if (mSharedPreferences.getBluetoothDeviceStringValue().length() == 0) {// No device selected
                     warningDialog(R.string.dialog_select_bluetooth_dongle_title, R.string.dialog_select_bluetooth_dongle_message);
                     buttonView.setChecked(false);
@@ -547,9 +537,10 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions,
                                            int[] grantResults) {
-        int i = 0;
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_LOCATION) {
-            if (grantResults.length == 1 && grantResults[0] == 0){
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
                 mPosition.updateIfListening();
             }
         }
@@ -596,56 +587,6 @@ public class MainActivity extends AppCompatActivity implements Drawer.OnDrawerIt
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             MainActivity.this.startActivity(intent);
         }
-    }
-
-    private void zipAndUpload(String fullpath) {
-        // For test
-        if (fullpath == null) {
-            try {
-                File tstFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "test.txt");
-                String str = "Hello World";
-//                String path = tstFile.getAbsolutePath();
-//                new File file = File(path);
-                tstFile.createNewFile();
-                FileOutputStream outputStream = new FileOutputStream(tstFile);
-                byte[] strToBytes = str.getBytes();
-                outputStream.write(strToBytes);
-
-                outputStream.close();
-                fullpath = tstFile.getAbsolutePath();
-            } catch (IOException ex) {
-                int i = 0;
-            }
-        }
-//        if (fullpath != null) {
-//            File zipFile = new File(mSharedPreferences.getContext().getCacheDir(), "temp.zip"); // Note: If device is running low on mem, file may be deleted!
-            File zipFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "test.zip");
-            try {
-                String abspath = zipFile.getAbsolutePath();
-                zip(fullpath, abspath);
-                // Upload Zipped File to cloud
-//                upload(abspath);
-            } catch (Exception ex) {
-                // ?
-            }
-//        }
-    }
-
-    public void zip(String sourceFile, String zipFile) throws IOException {
-        FileOutputStream fos = new FileOutputStream(zipFile);
-        ZipOutputStream zipOut = new ZipOutputStream(fos);
-        File fileToZip = new File(sourceFile);
-        FileInputStream fis = new FileInputStream(fileToZip);
-        ZipEntry zipEntry = new ZipEntry(fileToZip.getName());
-        zipOut.putNextEntry(zipEntry);
-        byte[] bytes = new byte[1024];
-        int length;
-        while((length = fis.read(bytes)) >= 0) {
-            zipOut.write(bytes, 0, length);
-        }
-        zipOut.close();
-        fis.close();
-        fos.close();
     }
 
     private void displayUsersGuide() {

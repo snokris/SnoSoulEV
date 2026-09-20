@@ -86,6 +86,10 @@ public class OBD2Device implements BluetoothService.ServiceStateListener {
 
     private boolean doConnect() {
         if (mConnectInProgress) return true;
+        if (!MainActivity.hasBluetoothPermissions(mContext)) {
+            mConnectWanted = false;
+            return false;
+        }
         mConnectInProgress = true;
         Log.d("OBD2Device", "Enter connect");
         boolean isDeviceValid = mBluetoothService.isBluetoothAvailable();

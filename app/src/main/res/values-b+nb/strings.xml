@@ -1,6 +1,6 @@
 ﻿<resources>
-    <string name="app_name">Soul EV Spy</string>
-    <string name="app_name_lite">Soul EV Spy Lite</string>
+    <string name="app_name">SnoSoulEV</string>
+    <string name="app_name_lite">SnoSoulEV</string>
 
     <!-- Navigation Drawer -->
     <string name="action_bluetooth">Koble til OBD-II-dongle</string>
@@ -68,8 +68,8 @@
     <string name="pref_storage_upload_to_cloud">Last opp filer til skyen (potensielle kostnader!)</string>
     <string name="pref_storage_save_in_downloads_dir">Lagre data i Downloads-mappen</string>
 
-    <string name="title_pref_about">Om Soul EV Spy</string>
-    <string name="pref_about">Om Soul EV Spy</string>
+    <string name="title_pref_about">Om SnoSoulEV</string>
+    <string name="pref_about">Om SnoSoulEV</string>
     <string name="pref_licenses">Open source-lisenser</string>
     <string name="pref_licenses_summary">Lisensdetaljer for open source-programvare</string>
     <string name="pref_version_summary">Versjon %1$s</string>
@@ -79,7 +79,7 @@
     <string name="pref_contributors_summary">De som bidro til denne appen</string>
     <string name="pref_users_guide">Brukermanual</string>
 
-    <string name="dialog_back_button_message">Avslutt SoulEVSpy?</string>
+    <string name="dialog_back_button_message">Avslutt SnoSoulEV?</string>
     <string name="dialog_back_button_terminate">Avslutt</string>
     <string name="dialog_back_button_background">Bakgrunn</string>
     <string name="dialog_back_button_cancel">Avbryt</string>
@@ -97,9 +97,6 @@
     <string name="dialog_authenticate_to_upload_title">Det er nødvendig å logge inn</string>
     <string name="dialog_authenticate_to_upload_message">Du er nødt til at registrere deg og logge inn, for å kunne sende data til skyen. Derfor vil du bli bedt om å logge inn som neste trinn.</string>
 
-    <string name="dialog_lite_splash_title">Bemerk</string>
-    <string name="dialog_lite_splash_message">Denne gratis-appen (Soul EV Spy Lite) skriver ikke lengere datafiler i Download-mappen, og blir ikke lenger lagret. Du bør vurdere å oppgradere til den betalte appen (Soul EV Spy).</string>
-
     <string name="dialog_select_bluetooth_dongle_title">Velg OBD-II-enhet</string>
     <string name="dialog_select_bluetooth_dongle_message">Velg din OBD-II Bluetooth-enhet i innstillingene</string>
 
@@ -108,10 +105,10 @@
 
     <!-- Main Activity -->
 
-    <string name="dongle_connecting">SoulEVSpy kobler til...</string>
-    <string name="dongle_disconnecting">SoulEVSpy kobler fra...</string>
-    <string name="dongle_connected">SoulEVSpy tilkoblet</string>
-    <string name="dongle_disconnected">SoulEVSpy frakoblet</string>
+    <string name="dongle_connecting">SnoSoulEV kobler til...</string>
+    <string name="dongle_disconnecting">SnoSoulEV kobler fra...</string>
+    <string name="dongle_connected">SnoSoulEV tilkoblet</string>
+    <string name="dongle_disconnected">SnoSoulEV frakoblet</string>
 
     <!-- Error messages -->
     <string name="error_bluetooth_not_available">Bluetooth er ikke tilgjengelig</string>

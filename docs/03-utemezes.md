@@ -9,11 +9,15 @@ emulátor kell.
 
 ## 1. fázis – saját identitás és platformmodernizálás
 
-- saját appnév, ikon és application ID;
-- modern Bluetooth- és storage-engedélyek;
+Státusz: folyamatban.
+
+- [x] saját appnév, ikon és application ID;
+- [x] `targetSdk 35`, modern Bluetooth- és storage-engedélyek;
 - töltőállomás/felhő funkció végleges izolálása vagy eltávolítása;
 - régi UI-függőségek kontrollált frissítése;
 - kommunikációs viselkedés változatlanul hagyása.
+
+Az identitás- és engedélydöntések: [[decisions/0002-sajat-identitas-es-engedelyek]].
 
 ## 2. fázis – anonimizált log-replay
 

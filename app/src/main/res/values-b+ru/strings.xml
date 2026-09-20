@@ -1,8 +1,8 @@
 <resources>
 
-    <string name="app_name">Soul EV Spy</string>
+    <string name="app_name">SnoSoulEV</string>
 
-    <string name="app_name_lite">Soul EV Spy Lite</string>
+    <string name="app_name_lite">SnoSoulEV</string>
 
 
 
@@ -138,7 +138,7 @@
 
     <string name="title_pref_about">Информация</string>
 
-    <string name="pref_about">Информация о Soul EV Spy</string>
+    <string name="pref_about">Информация о SnoSoulEV</string>
 
     <string name="pref_licenses">Лицензии с открытым исходным кодом</string>
 
@@ -154,7 +154,7 @@
     <string name="pref_users_guide">Руководство пользователя</string>
 
 
-    <string name="dialog_back_button_message">Отключить SoulEVSpy?</string>
+    <string name="dialog_back_button_message">Отключить SnoSoulEV?</string>
 
     <string name="dialog_back_button_terminate">Отключить</string>
 
@@ -190,12 +190,6 @@
 
 
 
-    <string name="dialog_lite_splash_title">Уведомления</string>
-
-    <string name="dialog_lite_splash_message">Бесплатная версия (Soul EV Spy Lite) не сохранит данные. Купите полную версию (Soul EV Spy).</string>
-
-
-
     <string name="dialog_select_bluetooth_dongle_title">Выберите OBD-II адаптер</string>
 
     <string name="dialog_select_bluetooth_dongle_message">Пожалуйста выберите OBD-II Bluetooth адаптер в настройках</string>
@@ -212,13 +206,13 @@
 
 
 
-    <string name="dongle_connecting">SoulEVSpy Подключение...</string>
+    <string name="dongle_connecting">SnoSoulEV Подключение...</string>
 
-    <string name="dongle_disconnecting">SoulEVSpy Отключение...</string>
+    <string name="dongle_disconnecting">SnoSoulEV Отключение...</string>
 
-    <string name="dongle_connected">SoulEVSpy Подключено</string>
+    <string name="dongle_connected">SnoSoulEV Подключено</string>
 
-    <string name="dongle_disconnected">SoulEVSpy Отключено</string>
+    <string name="dongle_disconnected">SnoSoulEV Отключено</string>
 
 
 

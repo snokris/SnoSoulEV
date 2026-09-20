@@ -1,5 +1,6 @@
 package com.evranger.soulevspy.fragment;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -22,7 +23,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-
+import com.evranger.soulevspy.activity.MainActivity;
 import com.evranger.soulevspy.util.ClientSharedPreferences;
 
 import com.evranger.soulevspy.R;
@@ -96,6 +97,7 @@ public class ClientPreferencesFragment extends PreferenceFragment implements Sha
     }
 
     @Override
+    @SuppressLint("MissingPermission")
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         // Updating all preferences summary...
 
@@ -118,7 +120,9 @@ public class ClientPreferencesFragment extends PreferenceFragment implements Sha
         String btSummary = getString(R.string.pref_bluetooth_device_summary);
         String btAddress = mSharedPreferences.getBluetoothDeviceStringValue();
         BluetoothAdapter bta = BluetoothAdapter.getDefaultAdapter();
-        if (!mSharedPreferences.DEFAULT_BLUETOOTH_DEVICE.equals(btAddress) && (bta != null))
+        if (!mSharedPreferences.DEFAULT_BLUETOOTH_DEVICE.equals(btAddress)
+                && bta != null
+                && MainActivity.hasBluetoothPermissions(getActivity()))
         {
             if (bta.isEnabled()) {
                 // Set the bluetooth adapter name as summary
@@ -146,9 +150,15 @@ public class ClientPreferencesFragment extends PreferenceFragment implements Sha
         //getActivity().onContentChanged();
     }
 
+    @SuppressLint("MissingPermission")
     private void loadBluetoothDevices() {
         // Get paired devices and populate preference list
         ListPreference listBtDevices = (ListPreference) findPreference(getString(R.string.key_list_bluetooth_device));
+        if (!MainActivity.hasBluetoothPermissions(getActivity())) {
+            listBtDevices.setEnabled(false);
+            requestPermissions(MainActivity.PERMISSIONS_BLUETOOTH, MainActivity.REQUEST_BLUETOOTH);
+            return;
+        }
         BluetoothAdapter bta = BluetoothAdapter.getDefaultAdapter();
         if (bta == null || !bta.isEnabled()) {
             // The device do not support Bluetooth
@@ -172,6 +182,16 @@ public class ClientPreferencesFragment extends PreferenceFragment implements Sha
                 listBtDevices.setEntryValues(new CharSequence[0]);
             }
             listBtDevices.setEnabled(hasPairedDevices);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MainActivity.REQUEST_BLUETOOTH
+                && MainActivity.hasBluetoothPermissions(getActivity())) {
+            loadBluetoothDevices();
+            onSharedPreferenceChanged(null, "");
         }
     }
 

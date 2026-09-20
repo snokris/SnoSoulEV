@@ -1,4 +1,4 @@
-# Soul EV Diagnostics – projektmemória
+# SnoSoulEV – projektmemória
 
 Ez a könyvtár Obsidian vaultként is megnyitható. A jegyzetek közönséges,
 verziókövetett Markdown-fájlok, ezért GitHubon és bármely szerkesztőben is
@@ -10,14 +10,19 @@ olvashatók.
 - [[02-baseline-jelentes]] – a 0. fázis eredménye és fennmaradó kockázatai
 - [[03-utemezes]] – a specifikációból levezetett fázisok
 - [[decisions/0001-projektmemoria]] – mi kerül Obsidianba, `AGENTS.md`-be és Gitbe
+- [[decisions/0002-sajat-identitas-es-engedelyek]] – appazonosító,
+  Bluetooth- és tárhelydöntések
 
 ## Rövid projektazonosító
 
 - Upstream: `langemand/SoulEVSpy`
 - Kiinduló commit: `0a1cafb93a65d17e0c7e1bb3ad2bc9cb965d02a7`
-- Aktív baseline ág: `modernize/build-baseline`
-- Ideiglenes fejlesztési név: Soul EV Diagnostics
-- Jelenlegi Android application ID: `com.evranger.soulevspy` (az átnevezés az 1. fázis része)
+- Baseline ág: `modernize/build-baseline`
+- Aktív 1. fázis ág: `modernize/app-identity-permissions`
+- Alkalmazásnév: SnoSoulEV
+- Android application ID: `hu.snokris.snosoulev`
+- A Java/Android namespace átmenetileg `com.evranger.soulevspy`, hogy a
+  kommunikációs kód átnevezése ne keveredjen a platformmodernizálással.
 
 ## Adatbiztonság
 

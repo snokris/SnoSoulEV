@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Soul EV Spy</string>
-    <string name="app_name_lite">Soul EV Spy Lite</string>
+    <string name="app_name">SnoSoulEV</string>
+    <string name="app_name_lite">SnoSoulEV</string>
     
     <!-- Navigation Drawer -->
 
@@ -70,7 +70,7 @@
     <string name="pref_storage_save_in_downloads_dir">Sauvegarder les données dans le répertoire de téléchargements</string>
 
     <string name="title_pref_about">À propos</string>
-    <string name="pref_about">À propos de Soul EV Spy</string>
+    <string name="pref_about">À propos de SnoSoulEV</string>
     <string name="pref_licenses">Licences Open source</string>
     <string name="pref_licenses_summary">Détails de la licence pour les logiciels open source</string>
     <string name="pref_version_summary">Version %1$s</string>
@@ -80,7 +80,7 @@
     <string name="pref_contributors_summary">Ceux qui ont contribué à cette application</string>
     <string name="pref_users_guide">Guide de l\'utilisateur</string>
 
-    <string name="dialog_back_button_message">Fermer SoulEVSpy?</string>
+    <string name="dialog_back_button_message">Fermer SnoSoulEV?</string>
     <string name="dialog_back_button_terminate">Fermer</string>
     <string name="dialog_back_button_background">Arrière-plan</string>
     <string name="dialog_back_button_cancel">Canceller</string>
@@ -98,9 +98,6 @@
     <string name="dialog_authenticate_to_upload_title">Authentification nécessaire</string>
     <string name="dialog_authenticate_to_upload_message">Vous devez vous authentifier pour pouvoir télécharger des données. Vous serez invité à vous connecter ensuite.</string>
 
-    <string name="dialog_lite_splash_title">Remarquer</string>
-    <string name="dialog_lite_splash_message">Cette application gratuite (Soul EV Spy Lite) n\'enregistre plus les fichiers de données dans le catalogue de téléchargement et ne sera plus améliorée. S\'il vous plaît, envisagez de passer à l\'application payante (Soul EV Spy).</string>
-
     <string name="dialog_select_bluetooth_dongle_title">Sélectionnez le dongle OBD-II</string>
     <string name="dialog_select_bluetooth_dongle_message">S\'il vous plaît sélectionnez votre dongle Bluetooth OBD-II dans les paramètres de l\'application</string>
 
@@ -109,10 +106,10 @@
 
     <!-- Main Activity -->
 
-    <string name="dongle_connecting">Connection SoulEVSpy...</string>
-    <string name="dongle_disconnecting">Déconnection SoulEVSpy...</string>
-    <string name="dongle_connected">SoulEVSpy Connecté</string>
-    <string name="dongle_disconnected">SoulEVSpy Déconnecté</string>
+    <string name="dongle_connecting">Connection SnoSoulEV...</string>
+    <string name="dongle_disconnecting">Déconnection SnoSoulEV...</string>
+    <string name="dongle_connected">SnoSoulEV Connecté</string>
+    <string name="dongle_disconnected">SnoSoulEV Déconnecté</string>
 
     <!-- Error messages -->
 

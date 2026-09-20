@@ -1,5 +1,6 @@
 package com.evranger.elm327.io.bluetooth;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -13,7 +14,9 @@ import android.util.Log;
 
 /**
  * Created by Pierre-Etienne Messier <pierre.etienne.messier@gmail.com> on 2015-10-30.
+ * Runtime Bluetooth permissions are enforced by the app-layer connection gate.
  */
+@SuppressLint("MissingPermission")
 public class BluetoothService extends Service {
     private static final String TAG = BluetoothService.class.getSimpleName();
     // We are connecting to a Bluetooth serial board, therefore we use the well-known SPP UUID
@@ -175,11 +178,7 @@ public class BluetoothService extends Service {
      */
     public boolean isBluetoothAvailable() {
         if(mBluetoothAvailable == null) {
-            try {
-                mBluetoothAvailable = (mBluetoothAdapter != null) && (!(mBluetoothAdapter.getAddress() == null));
-            } catch (NullPointerException e) {
-                mBluetoothAvailable = false;
-            }
+            mBluetoothAvailable = mBluetoothAdapter != null;
         }
         return mBluetoothAvailable;
     }

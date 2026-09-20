@@ -20,12 +20,12 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId 'com.evranger.soulevspy'
+        applicationId 'hu.snokris.snosoulev'
         minSdk 16
-        targetSdk 28
+        targetSdk 35
         versionCode versionCodeValue
         versionName "${versionMajor}.${versionMinor}.${versionPatch}-${versionBuild}"
-        setProperty('archivesBaseName', "SoulEVSpy-$versionName")
+        setProperty('archivesBaseName', "SnoSoulEV-$versionName")
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 

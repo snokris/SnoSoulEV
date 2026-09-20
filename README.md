@@ -1,4 +1,12 @@
-# Soul EV Spy
+# SnoSoulEV
+
+SnoSoulEV is an independent, read-only modernization fork of
+[langemand/SoulEVSpy](https://github.com/langemand/SoulEVSpy). The fork keeps
+the original project history and attribution while the Android platform,
+reliability and diagnostics layers are modernized. Development notes are in
+[`docs/README.md`](docs/README.md).
+
+## Upstream project description
 
 Soul EV Spy is an Android application that allows you to read out some useful information out of your 
 Kia or Hyundai EV, that you cannot access using the on-board computer or display.

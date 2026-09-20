@@ -2,167 +2,13 @@
 <issues format="6" by="lint 8.13.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.13.2)" variant="all" version="8.13.2">
 
     <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="        mBluetoothAdapter.cancelDiscovery();"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="79"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothAdapter.cancelDiscovery: android.permission.BLUETOOTH_SCAN"
-        errorLine1="        mBluetoothAdapter.cancelDiscovery();"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="79"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="                mBluetoothSocket = mBluetoothDevice.createRfcommSocketToServiceRecord(SPP_UUID);"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="84"
-            column="36"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothDevice.createRfcommSocketToServiceRecord: android.permission.BLUETOOTH_CONNECT"
-        errorLine1="                mBluetoothSocket = mBluetoothDevice.createRfcommSocketToServiceRecord(SPP_UUID);"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="84"
-            column="36"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="                mBluetoothSocket = mBluetoothDevice.createInsecureRfcommSocketToServiceRecord(SPP_UUID);"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="87"
-            column="36"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothDevice.createInsecureRfcommSocketToServiceRecord: android.permission.BLUETOOTH_CONNECT"
-        errorLine1="                mBluetoothSocket = mBluetoothDevice.createInsecureRfcommSocketToServiceRecord(SPP_UUID);"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="87"
-            column="36"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="            mBluetoothSocket.connect();"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="95"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothSocket.connect: android.permission.BLUETOOTH_CONNECT"
-        errorLine1="            mBluetoothSocket.connect();"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="95"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="                    btSummary = device.getName();"
-        errorLine2="                                ~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="127"
-            column="33"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT"
-        errorLine1="                    btSummary = device.getName();"
-        errorLine2="                                ~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="127"
-            column="33"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="            Set&lt;BluetoothDevice> pairedDevices = BluetoothAdapter.getDefaultAdapter().getBondedDevices();"
-        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="158"
-            column="50"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothAdapter.getBondedDevices: android.permission.BLUETOOTH_CONNECT"
-        errorLine1="            Set&lt;BluetoothDevice> pairedDevices = BluetoothAdapter.getDefaultAdapter().getBondedDevices();"
-        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="158"
-            column="50"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
-        errorLine1="                    pairedDeviceStrings.add(device.getName() + &quot;\n&quot; + device.getAddress());"
-        errorLine2="                                            ~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="164"
-            column="45"/>
-    </issue>
-
-    <issue
-        id="MissingPermission"
-        message="Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT"
-        errorLine1="                    pairedDeviceStrings.add(device.getName() + &quot;\n&quot; + device.getAddress());"
-        errorLine2="                                            ~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="164"
-            column="45"/>
-    </issue>
-
-    <issue
         id="DefaultLocale"
         message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
         errorLine1="        pref.setSummary(String.format(&quot;%.1f&quot;, value));"
         errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="209"
+            line="229"
             column="25"/>
     </issue>
 
@@ -255,7 +101,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="26"
+            line="42"
             column="13"/>
     </issue>
 
@@ -277,7 +123,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="28"
+            line="44"
             column="13"/>
     </issue>
 
@@ -288,7 +134,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/evranger/soulevspy/activity/MainActivity.java"
-            line="513"
+            line="492"
             column="9"/>
     </issue>
 
@@ -310,7 +156,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="28"
+            line="44"
             column="13"/>
     </issue>
 
@@ -442,7 +288,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="239"
+            line="259"
             column="13"/>
     </issue>
 
@@ -474,7 +320,7 @@
         <location
             file="src/main/res/values-b+da/strings.xml"
             line="35"
-            column="1844"/>
+            column="1835"/>
     </issue>
 
     <issue
@@ -528,35 +374,13 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+fr/strings.xml"
-            line="184"
+            line="181"
             column="5"/>
         <location
             file="src/main/res/values/strings.xml"
-            line="346"
+            line="343"
             column="5"
             message="Conflicting number of arguments (0) here"/>
-    </issue>
-
-    <issue
-        id="UnsafeImplicitIntentLaunch"
-        message="The intent action `android.intent.action.MAIN (used to start an activity)` matches the intent filter of a non-exported component `com.evranger.soulevspy.activity.MainActivity` from a manifest. If you are trying to invoke this specific component via the action then you should make the intent explicit by calling `Intent.set{Component,Class,ClassName}`."
-        errorLine1="            Intent i = new Intent(Intent.ACTION_MAIN);"
-        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/soulevspy/activity/MainActivity.java"
-            line="501"
-            column="24"/>
-    </issue>
-
-    <issue
-        id="HardwareIds"
-        message="Using `getAddress` to get device identifiers is not recommended"
-        errorLine1="                mBluetoothAvailable = (mBluetoothAdapter != null) &amp;&amp; (!(mBluetoothAdapter.getAddress() == null));"
-        errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
-            line="179"
-            column="73"/>
     </issue>
 
     <issue
@@ -566,19 +390,19 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
-            line="231"
+            line="251"
             column="9"/>
     </issue>
 
     <issue
-        id="IntentFilterExportedReceiver"
-        message="As of Android 12, `android:exported` must be set; use `true` to make the activity available to other apps, and `false` otherwise. For launcher activities, this should be set to `true`."
-        errorLine1="        &lt;activity"
-        errorLine2="         ~~~~~~~~">
+        id="DataExtractionRules"
+        message="The attribute `android:dataExtractionRules` only applies for Android 12 and higher; since `minSdkVersion` is API 16 you should also set `android:fullBackupContent`"
+        errorLine1="        android:dataExtractionRules=&quot;@xml/data_extraction_rules&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="24"
-            column="10"/>
+            line="34"
+            column="38"/>
     </issue>
 
     <issue
@@ -822,7 +646,7 @@
     <issue
         id="UnusedResources"
         message="The resource `R.string.app_name` appears to be unused"
-        errorLine1="    &lt;string name=&quot;app_name&quot;>Soul EV Spy&lt;/string>"
+        errorLine1="    &lt;string name=&quot;app_name&quot;>SnoSoulEV&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
@@ -1024,7 +848,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="120"
+            line="117"
             column="13"/>
     </issue>
 
@@ -1035,7 +859,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="124"
+            line="121"
             column="13"/>
     </issue>
 
@@ -1046,7 +870,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="145"
+            line="142"
             column="13"/>
     </issue>
 
@@ -1057,7 +881,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="158"
+            line="155"
             column="13"/>
     </issue>
 
@@ -1068,7 +892,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="170"
+            line="167"
             column="13"/>
     </issue>
 
@@ -1079,7 +903,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="171"
+            line="168"
             column="13"/>
     </issue>
 
@@ -1090,7 +914,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="172"
+            line="169"
             column="13"/>
     </issue>
 
@@ -1101,7 +925,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="173"
+            line="170"
             column="13"/>
     </issue>
 
@@ -1112,7 +936,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="174"
+            line="171"
             column="13"/>
     </issue>
 
@@ -1123,7 +947,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="175"
+            line="172"
             column="13"/>
     </issue>
 
@@ -1134,7 +958,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="176"
+            line="173"
             column="13"/>
     </issue>
 
@@ -1145,7 +969,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="186"
+            line="183"
             column="13"/>
     </issue>
 
@@ -1156,7 +980,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="230"
+            line="227"
             column="13"/>
     </issue>
 
@@ -1167,7 +991,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="244"
+            line="241"
             column="13"/>
     </issue>
 
@@ -1178,7 +1002,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="245"
+            line="242"
             column="13"/>
     </issue>
 
@@ -1189,7 +1013,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="260"
+            line="257"
             column="13"/>
     </issue>
 
@@ -1200,7 +1024,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="273"
+            line="270"
             column="13"/>
     </issue>
 
@@ -1211,7 +1035,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="295"
+            line="292"
             column="13"/>
     </issue>
 
@@ -1222,7 +1046,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="296"
+            line="293"
             column="13"/>
     </issue>
 
@@ -1233,7 +1057,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="297"
+            line="294"
             column="13"/>
     </issue>
 
@@ -1244,7 +1068,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="298"
+            line="295"
             column="13"/>
     </issue>
 
@@ -1255,7 +1079,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="299"
+            line="296"
             column="13"/>
     </issue>
 
@@ -1266,7 +1090,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="300"
+            line="297"
             column="13"/>
     </issue>
 
@@ -1277,7 +1101,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="301"
+            line="298"
             column="13"/>
     </issue>
 
@@ -1288,7 +1112,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="304"
+            line="301"
             column="13"/>
     </issue>
 
@@ -1299,7 +1123,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="313"
+            line="310"
             column="13"/>
     </issue>
 
@@ -1310,7 +1134,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="314"
+            line="311"
             column="13"/>
     </issue>
 
@@ -1321,7 +1145,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="345"
+            line="342"
             column="13"/>
     </issue>
 
@@ -1332,7 +1156,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="378"
+            line="375"
             column="13"/>
     </issue>
 
@@ -1343,7 +1167,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="379"
+            line="376"
             column="13"/>
     </issue>
 
@@ -1419,7 +1243,7 @@
         <location
             file="src/main/res/values-b+ko/strings.xml"
             line="30"
-            column="1425"/>
+            column="1416"/>
     </issue>
 
     <issue
@@ -1428,7 +1252,7 @@
         <location
             file="src/main/res/values-b+da/strings.xml"
             line="31"
-            column="1605"/>
+            column="1596"/>
     </issue>
 
     <issue
@@ -1492,7 +1316,7 @@
         <location
             file="src/main/res/values-b+fi/strings.xml"
             line="61"
-            column="1610"/>
+            column="1601"/>
     </issue>
 
     <issue
@@ -1500,18 +1324,18 @@
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
         <location
             file="src/main/res/values-b+da/strings.xml"
-            line="111"
-            column="6336"/>
+            line="108"
+            column="6019"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy kobler til...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SnoSoulEV kobler til...&lt;/string>"
         errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+nb/strings.xml"
-            line="111"
+            line="108"
             column="38"/>
     </issue>
 
@@ -1520,106 +1344,106 @@
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
         <location
             file="src/main/res/values-b+da/strings.xml"
-            line="112"
-            column="6419"/>
+            line="109"
+            column="6102"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>Connection SoulEVSpy...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>Connection SnoSoulEV...&lt;/string>"
         errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+fr/strings.xml"
-            line="112"
+            line="109"
             column="38"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy kobler fra...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SnoSoulEV kobler fra...&lt;/string>"
         errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+nb/strings.xml"
-            line="112"
+            line="109"
             column="41"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy Connecting...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SnoSoulEV Connecting...&lt;/string>"
         errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="112"
+            line="109"
             column="38"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>Déconnection SoulEVSpy...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>Déconnection SnoSoulEV...&lt;/string>"
         errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+fr/strings.xml"
-            line="113"
+            line="110"
             column="41"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy Disconnecting...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SnoSoulEV Disconnecting...&lt;/string>"
         errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="113"
+            line="110"
             column="41"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy Verbindung aufbauen...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SnoSoulEV Verbindung aufbauen...&lt;/string>"
         errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+de/strings.xml"
-            line="187"
+            line="184"
             column="38"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy Verbindung trennen...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SnoSoulEV Verbindung trennen...&lt;/string>"
         errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+de/strings.xml"
-            line="189"
+            line="186"
             column="41"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy Подключение...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SnoSoulEV Подключение...&lt;/string>"
         errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+ru/strings.xml"
-            line="215"
+            line="209"
             column="38"/>
     </issue>
 
     <issue
         id="TypographyEllipsis"
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
-        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy Отключение...&lt;/string>"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SnoSoulEV Отключение...&lt;/string>"
         errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values-b+ru/strings.xml"
-            line="217"
+            line="211"
             column="41"/>
     </issue>
 
@@ -1628,8 +1452,8 @@
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
         <location
             file="src/main/res/values-b+fi/strings.xml"
-            line="219"
-            column="6316"/>
+            line="213"
+            column="6004"/>
     </issue>
 
     <issue
@@ -1637,19 +1461,8 @@
         message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
         <location
             file="src/main/res/values-b+fi/strings.xml"
-            line="221"
-            column="6388"/>
-    </issue>
-
-    <issue
-        id="MonochromeLauncherIcon"
-        message="The application adaptive icon is missing a monochrome tag"
-        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
-        errorLine2="^">
-        <location
-            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
-            line="2"
-            column="1"/>
+            line="215"
+            column="6076"/>
     </issue>
 
     <issue
