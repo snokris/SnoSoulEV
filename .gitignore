@@ -52,9 +52,9 @@ Thumbs.db
 # Local configuration file (sdk path, etc)
 local.properties
 
-Firebase config
+# Firebase config
 app/google-services.json
 
-Secret keys
+# Secret keys
 app/src/main/res/values/secrets.xml
 app/release/

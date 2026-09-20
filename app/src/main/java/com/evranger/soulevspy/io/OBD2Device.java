@@ -2,7 +2,6 @@ package com.evranger.soulevspy.io;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
-import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
@@ -11,8 +10,6 @@ import com.evranger.elm327.commands.Command;
 import com.evranger.elm327.io.bluetooth.BluetoothService;
 import com.evranger.elm327.log.CommLog;
 import com.evranger.soulevspy.activity.MainActivity;
-import com.google.firebase.analytics.FirebaseAnalytics;
-
 import com.evranger.elm327.io.ServiceStates;
 
 import com.evranger.soulevspy.R;
@@ -170,7 +167,7 @@ public class OBD2Device implements BluetoothService.ServiceStateListener {
                             }
                             mReadLoop = new ReadLoop(mSharedPreferences, mBluetoothService, mLoopCommands);
                             mReadLoop.start();
-                            logBluetoothEvent("connected");
+                            Log.i("OBD2Device", "Bluetooth connected");
                         }
                     }
                 });
@@ -184,7 +181,7 @@ public class OBD2Device implements BluetoothService.ServiceStateListener {
                 if (mReadLoop != null) {
                     mReadLoop.stop();
                 }
-                logBluetoothEvent("disconnected");
+                Log.i("OBD2Device", "Bluetooth disconnected");
                 if (mSharedPreferences.getAutoReconnectBooleanValue() && mConnectWanted) {
                     final OBD2Device me = this;
                     mAutoReconnectHandler.removeCallbacks(reconnectRunnable);
@@ -211,12 +208,6 @@ public class OBD2Device implements BluetoothService.ServiceStateListener {
 
     public boolean isConnected() {
         return mIsConnected;
-    }
-
-    public void logBluetoothEvent(String event) {
-        Bundle params = new Bundle();
-        params.putString("event", event);
-        FirebaseAnalytics.getInstance(mContext).logEvent("bluetooth_event", params);
     }
 
 }

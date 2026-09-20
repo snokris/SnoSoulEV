@@ -1,0 +1,1757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.13.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.13.2)" variant="all" version="8.13.2">
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="        mBluetoothAdapter.cancelDiscovery();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="79"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothAdapter.cancelDiscovery: android.permission.BLUETOOTH_SCAN"
+        errorLine1="        mBluetoothAdapter.cancelDiscovery();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="79"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="                mBluetoothSocket = mBluetoothDevice.createRfcommSocketToServiceRecord(SPP_UUID);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="84"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothDevice.createRfcommSocketToServiceRecord: android.permission.BLUETOOTH_CONNECT"
+        errorLine1="                mBluetoothSocket = mBluetoothDevice.createRfcommSocketToServiceRecord(SPP_UUID);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="84"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="                mBluetoothSocket = mBluetoothDevice.createInsecureRfcommSocketToServiceRecord(SPP_UUID);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="87"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothDevice.createInsecureRfcommSocketToServiceRecord: android.permission.BLUETOOTH_CONNECT"
+        errorLine1="                mBluetoothSocket = mBluetoothDevice.createInsecureRfcommSocketToServiceRecord(SPP_UUID);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="87"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="            mBluetoothSocket.connect();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothSocket.connect: android.permission.BLUETOOTH_CONNECT"
+        errorLine1="            mBluetoothSocket.connect();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="                    btSummary = device.getName();"
+        errorLine2="                                ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="127"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT"
+        errorLine1="                    btSummary = device.getName();"
+        errorLine2="                                ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="127"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="            Set&lt;BluetoothDevice> pairedDevices = BluetoothAdapter.getDefaultAdapter().getBondedDevices();"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="158"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothAdapter.getBondedDevices: android.permission.BLUETOOTH_CONNECT"
+        errorLine1="            Set&lt;BluetoothDevice> pairedDevices = BluetoothAdapter.getDefaultAdapter().getBondedDevices();"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="158"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        errorLine1="                    pairedDeviceStrings.add(device.getName() + &quot;\n&quot; + device.getAddress());"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="164"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT"
+        errorLine1="                    pairedDeviceStrings.add(device.getName() + &quot;\n&quot; + device.getAddress());"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="164"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        pref.setSummary(String.format(&quot;%.1f&quot;, value));"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="209"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        vehicleIdentificationNumber = vehicleIdentificationNumber.toUpperCase();"
+        errorLine2="                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/util/KiaVinParser.java"
+            line="37"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        super(&quot;AT ST &quot; + Integer.toHexString(0xFF &amp; timeoutInMs).toUpperCase());"
+        errorLine2="                                                                 ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/commands/protocol/obd/OBDSetTimeoutCommand.java"
+            line="10"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        return s == null ? &quot;&quot; : s.replaceAll(&quot;\\s&quot;, &quot;&quot;).toUpperCase();"
+        errorLine2="                                                        ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/exceptions/ResponseException.java"
+            line="29"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="                SimpleDateFormat formatter = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm&quot;);"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ChargerLocationsFragment.java"
+            line="94"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="                DateFormat format = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm:ss&quot;);"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/GpsFragment.java"
+            line="73"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        message="Suspicious indentation: This is indented but is not continuing the previous expression (`mColumnsToLog = new `...)"
+        errorLine1="                mColumnsToLog.addAll(Arrays.asList(res.getString(R.string.col_VIN)"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/io/ReadLoop.java"
+            line="36"
+            column="17"/>
+        <location
+            file="src/main/java/com/evranger/soulevspy/io/ReadLoop.java"
+            line="35"
+            column="9"
+            message="Previous statement here"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `elevation` is only used in API level 21 and higher (current min is 16)"
+        errorLine1="        android:elevation=&quot;4dp&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed"
+        errorLine1="            android:label=&quot;@string/app_name_lite&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of Gradle than 8.13 is available: 8.14.5"
+        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/Documents/ChatGPT/Kia/gradle/wrapper/gradle-wrapper.properties"
+            line="6"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="LockedOrientationActivity"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices"
+        errorLine1="            android:screenOrientation=&quot;portrait&quot; >"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SourceLockedOrientationActivity"
+        message="You should not lock orientation of your activities, so that you can support a good user experience for any device or orientation"
+        errorLine1="        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/activity/MainActivity.java"
+            line="513"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ExtraText"
+        message="Unexpected text found in layout file: &quot;android:layout_width=&quot;fill_parent&quot;&quot;"
+        errorLine1="    android:layout_width=&quot;fill_parent&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_cellmap_voltage.xml"
+            line="1241"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
+        errorLine1="            android:screenOrientation=&quot;portrait&quot; >"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView tv = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_module_&quot; + i + &quot;_temperature&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                    ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="130"
+            column="133"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView tv = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_cell_&quot; + (i+1) + &quot;_voltage&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                    ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="155"
+            column="133"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                    ProgressBar apgn = ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;progress_bar_negative_amps&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                          ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="181"
+            column="123"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                    ProgressBar apgp = ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;progress_bar_positive_amps&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                          ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="182"
+            column="123"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView left_col_above = ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;_97&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                     ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="184"
+            column="134"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView left_col = ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_power_text&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                               ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="185"
+            column="128"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView tvll = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_cell_97_voltage&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="198"
+            column="135"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView tvlr = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_cell_100_voltage&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="199"
+            column="135"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView tvrl = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_cell_101_voltage&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="205"
+            column="135"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                        TextView tvrr = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;text_cell_104_voltage&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="206"
+            column="135"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                    TextView tv = (TextView) ((MainActivity) mValues.getPreferences().getContext()).findViewById(getResources().getIdentifier(&quot;title_temperatures&quot;, &quot;id&quot;, packageName));"
+        errorLine2="                                                                                                                                ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="243"
+            column="129"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(android.os.Build.VERSION_CODES.M) instead of `@TargetApi` to propagate the requirement to callers of `onReceivedError`"
+        errorLine1="            @TargetApi(android.os.Build.VERSION_CODES.M)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="239"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Ok&quot; is usually capitalized as &quot;OK&quot;"
+        errorLine1="        Click Ok to continue&lt;/string>"
+        errorLine2="              ~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="95"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Ok&quot; is usually capitalized as &quot;OK&quot;"
+        errorLine1="    &lt;string name=&quot;dialog_Ok&quot;>Ok&lt;/string>"
+        errorLine2="                             ~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="96"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;list_car_model_IoniqEV&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;da&quot; (Danish) here">
+        <location
+            file="src/main/res/values-b+da/strings.xml"
+            line="35"
+            column="1844"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;list_car_model_IoniqEV&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;nb&quot; (Norwegian Bokmål) here"
+        errorLine1="    &lt;string name=&quot;list_car_model_IoniqEV&quot;>Hyundai Ioniq&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+nb/strings.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;list_car_model_IoniqEV&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;fr&quot; (French) here"
+        errorLine1="    &lt;string name=&quot;list_car_model_IoniqEV&quot;>Hyundai Ioniq&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+fr/strings.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;list_car_model_IoniqEV&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;de&quot; (German) here"
+        errorLine1="    &lt;string name=&quot;list_car_model_IoniqEV&quot;>Hyundai Ioniq&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+de/strings.xml"
+            line="66"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;list_car_model_IoniqEV&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;ru&quot; (Russian) here"
+        errorLine1="    &lt;string name=&quot;list_car_model_IoniqEV&quot;>Hyundai Ioniq&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+ru/strings.xml"
+            line="67"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `battery_soh_pct`; found both 1 here and 0 in values/strings.xml"
+        errorLine1="    &lt;string name=&quot;battery_soh_pct&quot;>SOH% de la batterie&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+fr/strings.xml"
+            line="184"
+            column="5"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="346"
+            column="5"
+            message="Conflicting number of arguments (0) here"/>
+    </issue>
+
+    <issue
+        id="UnsafeImplicitIntentLaunch"
+        message="The intent action `android.intent.action.MAIN (used to start an activity)` matches the intent filter of a non-exported component `com.evranger.soulevspy.activity.MainActivity` from a manifest. If you are trying to invoke this specific component via the action then you should make the intent explicit by calling `Intent.set{Component,Class,ClassName}`."
+        errorLine1="            Intent i = new Intent(Intent.ACTION_MAIN);"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/activity/MainActivity.java"
+            line="501"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        message="Using `getAddress` to get device identifiers is not recommended"
+        errorLine1="                mBluetoothAvailable = (mBluetoothAdapter != null) &amp;&amp; (!(mBluetoothAdapter.getAddress() == null));"
+        errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/io/bluetooth/BluetoothService.java"
+            line="179"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="SetJavaScriptEnabled"
+        message="Using `setJavaScriptEnabled` can introduce XSS vulnerabilities into your application, review carefully"
+        errorLine1="        mWebview.getSettings().setJavaScriptEnabled(true); // enable javascript"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ClientPreferencesFragment.java"
+            line="231"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="IntentFilterExportedReceiver"
+        message="As of Android 12, `android:exported` must be set; use `true` to make the activity available to other apps, and `false` otherwise. For launcher activities, this should be set to `true`."
+        errorLine1="        &lt;activity"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="24"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentEnd`"
+        errorLine1="        android:layout_alignParentEnd=&quot;true&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_battery.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentStart`"
+        errorLine1="        android:layout_alignParentStart=&quot;true&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_battery.xml"
+            line="18"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentLeft`"
+        errorLine1="        android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_battery.xml"
+            line="19"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`"
+        errorLine1="        android:layout_alignParentRight=&quot;true&quot;/>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_battery.xml"
+            line="20"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        message="Use `Double.valueOf((int)val)` instead"
+        errorLine1="                    val = new Double((int)val);"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryFragment.java"
+            line="71"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        message="Use `Double.valueOf((int)val)` instead"
+        errorLine1="                    val = new Double((int)val);"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/ObcFragment.java"
+            line="66"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        message="Use `Double.valueOf(lines.get(0))` instead"
+        errorLine1="            voltage = new Double(lines.get(0));"
+        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/commands/protocol/ReadInputVoltageCommand.java"
+            line="26"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        message="Use `Double.valueOf(getInputVoltage())` instead"
+        errorLine1="        CurrentValuesSingleton.getInstance().set(&quot;ELM327.Voltage_V&quot;, new Double(getInputVoltage()));"
+        errorLine2="                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/elm327/commands/protocol/ReadInputVoltageCommand.java"
+            line="33"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        message="Use `Double.valueOf((int)val)` instead"
+        errorLine1="                    val = new Double((int)val);"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/VmcuFragment.java"
+            line="66"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.primary_light` appears to be unused"
+        errorLine1="    &lt;color name=&quot;primary_light&quot;>#B2DFDB&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.primary_text` appears to be unused"
+        errorLine1="    &lt;color name=&quot;primary_text&quot;>#212121&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.secondary_text` appears to be unused"
+        errorLine1="    &lt;color name=&quot;secondary_text&quot;>#727272&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.icons` appears to be unused"
+        errorLine1="    &lt;color name=&quot;icons&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.divider` appears to be unused"
+        errorLine1="    &lt;color name=&quot;divider&quot;>#B6B6B6&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.material_drawer_selected_text` appears to be unused"
+        errorLine1="    &lt;color name=&quot;material_drawer_selected_text&quot;>#000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="21"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.key_edit_auto_connect_limit` appears to be unused"
+        errorLine1="    &lt;string name=&quot;key_edit_auto_connect_limit&quot; translatable=&quot;false&quot;>edit_auto_connect_limit&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/constants.xml"
+            line="11"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.list_car_model_value_choose` appears to be unused"
+        errorLine1="    &lt;string name=&quot;list_car_model_value_choose&quot; translatable=&quot;false&quot;>ChooseAnother&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/constants.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.list_pressure_value_kpa` appears to be unused"
+        errorLine1="    &lt;string name=&quot;list_pressure_value_kpa&quot; translatable=&quot;false&quot;>kPa&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/constants.xml"
+            line="44"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.nav_header_vertical_spacing` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;nav_header_vertical_spacing&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.nav_header_height` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;nav_header_height&quot;>72dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.fab_margin` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;fab_margin&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.app_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;app_name&quot;>Soul EV Spy&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="2"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_dashboard` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_dashboard&quot;>Dashboard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_dtc` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_dtc&quot;>DTC codes&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="15"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_replay` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_replay&quot;>Replay recorded data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_help` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_help&quot;>Help &amp;amp; Feedback&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_climate` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_climate&quot;>Aircon&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.list_car_model_MonitorMode` appears to be unused"
+        errorLine1="    &lt;string name=&quot;list_car_model_MonitorMode&quot;>Monitor Mode&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.list_pressure_kpa` appears to be unused"
+        errorLine1="    &lt;string name=&quot;list_pressure_kpa&quot;>kilopascal (kPa)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_auto_connect_limit` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_auto_connect_limit&quot;>Failure limit before stop retrying&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_default_auto_connect_limit` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_default_auto_connect_limit&quot; translatable=&quot;false&quot;>10&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_pref_storage` appears to be unused"
+        errorLine1="    &lt;string name=&quot;title_pref_storage&quot;>Storage&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_storage_upload_to_cloud` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_storage_upload_to_cloud&quot;>Upload data to cloud (may incur charges!)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_storage_save_in_downloads_dir` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_storage_save_in_downloads_dir&quot;>Save data in Downloads dir&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_users_guide` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_users_guide&quot;>Users\&apos; guide&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dialog_back_button_cancel` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dialog_back_button_cancel&quot;>Cancel&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dialog_warn_data_not_saved_title` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dialog_warn_data_not_saved_title&quot;>&quot;WARNING: Data will not be saved!&quot;&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dialog_warn_data_not_saved_message` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dialog_warn_data_not_saved_message&quot;>Neither of these Settings are checked:\n"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dialog_authenticate_to_upload_message` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dialog_authenticate_to_upload_message&quot;>You need to authenticate, in order to upload data. You will be requested to log in next.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.error_bluetooth_service_not_available` appears to be unused"
+        errorLine1="    &lt;string name=&quot;error_bluetooth_service_not_available&quot;>Bluetooth service is not available&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="120"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.info_data_will_not_be_saved` appears to be unused"
+        errorLine1="    &lt;string name=&quot;info_data_will_not_be_saved&quot;>Data will not be stored!&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="124"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.car_engine_30kWh` appears to be unused"
+        errorLine1="    &lt;string name=&quot;car_engine_30kWh&quot; translatable=&quot;false&quot;>Battery [LiPB 375 V, 80 Ah] + Motor [3-phase AC 80 kW]&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="145"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.car_trim_ultimate` appears to be unused"
+        errorLine1="    &lt;string name=&quot;car_trim_ultimate&quot;>Ultimate&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="158"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_pid_unknown` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_pid_unknown&quot;>Still unknown for car model year&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="170"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_awaiting` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_awaiting&quot;>Awaiting data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="171"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_bms_not_read` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_bms_not_read&quot;>Awaiting read of BMS data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="172"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_deterioration_bms_not_set` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_deterioration_bms_not_set&quot;>BMS has no deterioration value yet&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="173"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_deterioration` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_deterioration&quot;>Calculated from BMS deterioration min/max&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="174"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_pid_scaled_bms_not_set` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_pid_scaled_bms_not_set&quot;>BMS has no SOH value yet&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="175"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.calc_soh_source_pid_scaled` appears to be unused"
+        errorLine1="    &lt;string name=&quot;calc_soh_source_pid_scaled&quot;>BMS SOH value&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_system_status` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_system_status&quot; translatable=&quot;false&quot;>system.status&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="186"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_vmcu_aux_battery_A` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_vmcu_aux_battery_A&quot; translatable=&quot;false&quot;>vmcu.aux_battery_current_A&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="230"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_battery_main_relay_is_on` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_battery_main_relay_is_on&quot; translatable=&quot;false&quot;>battery.main_relay_is_on&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="244"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_battery_car_is_ignition_on` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_battery_car_is_ignition_on&quot; translatable=&quot;false&quot;>battery.car_is_ignition_on&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="245"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_battery_capacitor_v` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_battery_capacitor_v&quot; translatable=&quot;false&quot;>battery.capcitor_v&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="260"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_battery_state_of_health_pct` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_battery_state_of_health_pct&quot; translatable=&quot;false&quot;>battery.state_of_health_pct&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="273"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_cabin_temp_C` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_cabin_temp_C&quot; translatable=&quot;false&quot;>aircon.cabin_front_temp_C&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="295"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_ambient_temp_C` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_ambient_temp_C&quot; translatable=&quot;false&quot;>aircon.ambient_temp_C&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="296"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_evaporator_temp_C` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_evaporator_temp_C&quot; translatable=&quot;false&quot;>aircon.evaporator_temp_C&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="297"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_coolant_1_temp_C` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_coolant_1_temp_C&quot; translatable=&quot;false&quot;>aircon.coolant_1_temp_C&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="298"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_coolant_2_temp_C` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_coolant_2_temp_C&quot; translatable=&quot;false&quot;>aircon.coolant_2_temp_C&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="299"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_absolute_air_pressure_kgpcm2` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_absolute_air_pressure_kgpcm2&quot; translatable=&quot;false&quot;>aircon.absolute_air_pressure_kgpcm2&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="300"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_ac_absolute_air_pressure_psi` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_ac_absolute_air_pressure_psi&quot; translatable=&quot;false&quot;>aircon.absolute_air_pressure_psi&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="301"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.col_calc_battery_soh_source` appears to be unused"
+        errorLine1="    &lt;string name=&quot;col_calc_battery_soh_source&quot; translatable=&quot;false&quot;>calc.battery_SOH_source&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="304"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_activity_cellmap_cellvoltage` appears to be unused"
+        errorLine1="    &lt;string name=&quot;title_activity_cellmap_cellvoltage&quot;>Voltage cellmap&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="313"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.button_CellmapVoltage` appears to be unused"
+        errorLine1="    &lt;string name=&quot;button_CellmapVoltage&quot;>Voltage cellmap&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="314"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.battery_soh_source` appears to be unused"
+        errorLine1="    &lt;string name=&quot;battery_soh_source&quot;>Battery SOH source&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="345"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_contributors` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_contributors&quot;>Contributors&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="378"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.anonymous` appears to be unused"
+        errorLine1="    &lt;string name=&quot;anonymous&quot;>Anonymous&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="379"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_AppBarOverlay` appears to be unused"
+        errorLine1="    &lt;style name=&quot;AppTheme.AppBarOverlay&quot; parent=&quot;ThemeOverlay.AppCompat.Dark.ActionBar&quot; />"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="14"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_PopupOverlay` appears to be unused"
+        errorLine1="    &lt;style name=&quot;AppTheme.PopupOverlay&quot; parent=&quot;ThemeOverlay.AppCompat.Light&quot; />"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="15"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `TableRow` layout or its `TableLayout` parent is unnecessary"
+        errorLine1="        &lt;TableRow"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_cellmap_voltage.xml"
+            line="1205"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `RelativeLayout` layout or its `RelativeLayout` parent is unnecessary"
+        errorLine1="    &lt;RelativeLayout"
+        errorLine2="     ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/listview_item.xml"
+            line="14"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `RelativeLayout` layout or its `RelativeLayout` parent is unnecessary"
+        errorLine1="        &lt;RelativeLayout"
+        errorLine2="         ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/listview_item.xml"
+            line="20"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="TooManyViews"
+        message="`activity_cellmap_voltage.xml` has more than 80 views, bad for performance"
+        errorLine1="            &lt;TextView"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_cellmap_voltage.xml"
+            line="664"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?">
+        <location
+            file="src/main/res/values-b+ko/strings.xml"
+            line="30"
+            column="1425"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?">
+        <location
+            file="src/main/res/values-b+da/strings.xml"
+            line="31"
+            column="1605"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;list_car_model_SoulEV2015&quot;>Kia Soul EV 2015-2019&lt;/string>"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+nb/strings.xml"
+            line="31"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;list_car_model_SoulEV2015&quot;>Kia Soul EV 2015-2019&lt;/string>"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="31"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;list_car_model_SoulEV2015&quot;>Kia Soul EV 2015-2019&lt;/string>"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+fr/strings.xml"
+            line="32"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;list_car_model_SoulEV2015&quot;>Kia Soul EV 2015-2019&lt;/string>"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+de/strings.xml"
+            line="58"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;list_car_model_SoulEV2015&quot;>Kia Soul EV 2015-2019&lt;/string>"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+ru/strings.xml"
+            line="59"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?">
+        <location
+            file="src/main/res/values-b+fi/strings.xml"
+            line="61"
+            column="1610"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values-b+da/strings.xml"
+            line="111"
+            column="6336"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy kobler til...&lt;/string>"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+nb/strings.xml"
+            line="111"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values-b+da/strings.xml"
+            line="112"
+            column="6419"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>Connection SoulEVSpy...&lt;/string>"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+fr/strings.xml"
+            line="112"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy kobler fra...&lt;/string>"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+nb/strings.xml"
+            line="112"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy Connecting...&lt;/string>"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="112"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>Déconnection SoulEVSpy...&lt;/string>"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+fr/strings.xml"
+            line="113"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy Disconnecting...&lt;/string>"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="113"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy Verbindung aufbauen...&lt;/string>"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+de/strings.xml"
+            line="187"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy Verbindung trennen...&lt;/string>"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+de/strings.xml"
+            line="189"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_connecting&quot;>SoulEVSpy Подключение...&lt;/string>"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+ru/strings.xml"
+            line="215"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;dongle_disconnecting&quot;>SoulEVSpy Отключение...&lt;/string>"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-b+ru/strings.xml"
+            line="217"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values-b+fi/strings.xml"
+            line="219"
+            column="6316"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values-b+fi/strings.xml"
+            line="221"
+            column="6388"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/google_maps_1797882_960_720.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/google_maps_1797882_960_720.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/nav_soulev.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/nav_soulev.png"/>
+    </issue>
+
+    <issue
+        id="ButtonCase"
+        message="The standard Android way to capitalize Ok is &quot;OK&quot; (tip: use `@android:string/ok` instead)"
+        errorLine1="    &lt;string name=&quot;dialog_Ok&quot;>Ok&lt;/string>"
+        errorLine2="                             ~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="96"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageButton"
+        errorLine2="             ~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/listview_item.xml"
+            line="35"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/nav_header.xml"
+            line="12"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                        tv.setText(mValues.getString(R.string._temp) + &quot; &quot; + unit.mTempUnit);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/evranger/soulevspy/fragment/BatteryCellmapFragment.java"
+            line="245"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;SOC : ---%&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;SOC : ---%&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_battery.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;text&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;text&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_dashboard.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/listview_item.xml"
+            line="40"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_toStartOf=&quot;@id/tvButton&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_toLeftOf=&quot;@id/tvButton&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/listview_item.xml"
+            line="57"
+            column="17"/>
+    </issue>
+
+</issues>

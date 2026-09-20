@@ -1,7 +1,7 @@
 package com.evranger.soulevspy.advisor;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -9,8 +9,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.firebase.analytics.FirebaseAnalytics;
-
 import com.evranger.soulevspy.R;
 import com.evranger.soulevspy.obd.values.CurrentValuesSingleton;
 import org.json.JSONArray;
@@ -22,7 +20,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -42,8 +39,6 @@ public class ChargeStations implements CurrentValuesSingleton.CurrentValueListen
     RequestQueue requestQueue = null;
 
     private Context mContext = null;
-
-    Bundle mRequestEventParams = new Bundle();
 
     public ChargeStations(Context context, boolean chademo, boolean ccs, double fullRange) {
         mDCChademo = chademo;
@@ -80,7 +75,7 @@ public class ChargeStations implements CurrentValuesSingleton.CurrentValueListen
             try {
                 JSONObject chargeStations = new JSONObject(json);
                 chargeLocations = chargeStations.getJSONArray("chargelocations");
-                logChargeStationsReceivedEvent(chargeLocations.length());
+                Log.i("ChargeStations", "Loaded " + chargeLocations.length() + " charge stations");
                 obj = null;
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -182,6 +177,12 @@ public class ChargeStations implements CurrentValuesSingleton.CurrentValueListen
     }
 
     private void getJSONFromMobileDe(Pos pos, double range) {
+        String apiKey = mContext.getString(R.string.goingelectric_de_api_key).trim();
+        if (apiKey.isEmpty()) {
+            Log.i("ChargeStations", "Remote charger refresh disabled: no API key configured");
+            return;
+        }
+
         // If a request was sent within the last 165 minutes, and has not been answered yet, don't send a new request
         Object recTimeObj = CurrentValuesSingleton.getInstance().get(R.string.charger_locations_update_time_ms);
         if (recTimeObj instanceof Long) {
@@ -199,15 +200,13 @@ public class ChargeStations implements CurrentValuesSingleton.CurrentValueListen
             plugs.append("CCS");
         }
 
-        String url = "https://api.goingelectric.de/chargepoints?key=" + mContext.getString(R.string.goingelectric_de_api_key)
+        String url = "https://api.goingelectric.de/chargepoints?key=" + apiKey
                 + "&lat=" + pos.mLat
                 + "&lng=" + pos.mLng
                 + "&radius=" + range/1000
                 + "&clustering=0"
                 + "&plugs=" + plugs.toString();
         mLastSucceeded = true;
-
-        logChargeStationsRequestEvent(pos, range);
 
         mLastRequestSentTime = System.currentTimeMillis();
 // Request a string response from the URL.
@@ -269,13 +268,4 @@ int i = 0;
         }
     }
 
-    public void logChargeStationsRequestEvent(Pos pos, Double range) {
-        mRequestEventParams = new Bundle();
-        mRequestEventParams.putString("lat_lng_range", new DecimalFormat("0.000").format(Double.valueOf(pos.mLat))+"_"+new DecimalFormat("0.000").format(Double.valueOf(pos.mLng))+"_"+new DecimalFormat("0").format(range/1000));
-    }
-
-    public void logChargeStationsReceivedEvent(int numstations) {
-        mRequestEventParams.putInt("number_of_stations", numstations);
-        FirebaseAnalytics.getInstance(mContext).logEvent("chargestations_request", mRequestEventParams);
-    }
 }

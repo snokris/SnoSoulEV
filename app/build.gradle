@@ -1,69 +1,52 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-
-android {
-    compileSdkVersion 28
-
-    def versionPropsFile = file('version.properties')
-
-    if (versionPropsFile.canRead()) {
-        def Properties versionProps = new Properties()
-
-        versionProps.load(new FileInputStream(versionPropsFile))
-        def value = 0
-        def runTasks = gradle.startParameter.taskNames
-        if ('assemble' in runTasks || 'assembleRelease' in runTasks || 'aR' in runTasks) {
-            value = 1
-        }
-
-        def versionMajor = 0
-        def versionMinor = 1
-        def versionPatch = versionProps['VERSION_PATCH'].toInteger() + value
-        def versionBuild = versionProps['VERSION_BUILD'].toInteger() + 1
-        def version_Code = versionProps['VERSION_CODE'].toInteger() + value
-
-        versionProps['VERSION_PATCH'] = versionPatch.toString()
-        versionProps['VERSION_BUILD'] = versionBuild.toString()
-        versionProps['VERSION_CODE'] = version_Code.toString()
-
-        versionProps.store(versionPropsFile.newWriter(), null)
-
-        defaultConfig {
-            applicationId "com.evranger.soulevspy"
-            minSdkVersion 16
-            targetSdkVersion 28
-            versionCode version_Code
-            versionName "${versionMajor}.${versionMinor}.${versionPatch}-${versionBuild}"
-            setProperty("archivesBaseName", "SoulEVSpy-$versionName")
-            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        }
-    } else {
-        throw new GradleException("Could not read version.properties!")
-    }
-    buildTypes {
-        release {
-            // Enables code shrinking, obfuscation, and optimization for only
-            // your project's release build type.
-            minifyEnabled true
-
-            // Enables resource shrinking, which is performed by the
-            // Android Gradle plugin.
-            shrinkResources true
-
-            // Includes the default ProGuard rules files that are packaged with
-            // the Android Gradle plugin. To learn more, go to the section about
-            // R8 configuration files.
-            proguardFiles getDefaultProguardFile(
-                    'proguard-android-optimize.txt'),
-                    'proguard-rules.pro'
-        }
-    }
-    defaultConfig {
-        minSdkVersion 16
-    }
+plugins {
+    id 'com.android.application'
 }
 
-repositories { jcenter() }
+def versionPropsFile = file('version.properties')
+if (!versionPropsFile.canRead()) {
+    throw new GradleException("Could not read version.properties!")
+}
+
+def versionProps = new Properties()
+versionPropsFile.withInputStream { versionProps.load(it) }
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = versionProps['VERSION_PATCH'].toInteger()
+def versionBuild = versionProps['VERSION_BUILD'].toInteger()
+def versionCodeValue = versionProps['VERSION_CODE'].toInteger()
+
+android {
+    namespace 'com.evranger.soulevspy'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.evranger.soulevspy'
+        minSdk 16
+        targetSdk 28
+        versionCode versionCodeValue
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}-${versionBuild}"
+        setProperty('archivesBaseName', "SoulEVSpy-$versionName")
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError true
+        baseline = file('lint-baseline.xml')
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -73,35 +56,13 @@ dependencies {
     implementation 'com.mikepenz:google-material-typeface:1.2.0.1@aar'
     implementation 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
     implementation 'org.apache.commons:commons-lang3:3.4'
-    implementation 'com.google.firebase:firebase-core:17.2.0'
-    implementation 'com.google.firebase:firebase-analytics:17.2.0'
-    implementation "androidx.versionedparcelable:versionedparcelable:1.1.0"
-//    implementation 'com.google.firebase:firebase-storage:19.0.0'
-//    implementation 'com.google.firebase:firebase-auth:19.0.0'
-//    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'androidx.versionedparcelable:versionedparcelable:1.1.1'
+    implementation 'com.android.volley:volley:1.2.1'
 
-    // Required only if Facebook login support is required
-    // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
-//    implementation 'com.facebook.android:facebook-android-sdk:4.x'
-
-    // Required only if Twitter login support is required
-    // Find the latest Twitter SDK releases here: https://goo.gl/E5wZvQ
-//    implementation 'com.twitter.sdk.android:twitter-core:3.x'
-
-    implementation('com.crashlytics.sdk.android:crashlytics:2.9.8') {
-        transitive = true
-    }
-    implementation 'com.android.volley:volley:1.1.1'
-
+    testImplementation 'junit:junit:4.13.2'
+    // Keep the instrumentation stack compatible with the app's API 16 minimum.
+    androidTestImplementation 'androidx.test:core:1.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation 'org.mockito:mockito-android:3.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-
 }
-
-apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
-
-// Apply the Crashlytics Gradle plugin
-apply plugin: 'com.google.firebase.crashlytics'
