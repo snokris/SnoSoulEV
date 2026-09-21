@@ -16,8 +16,9 @@ egyaránt olvasható tudástár.
 ## Következmények
 
 - A kanonikus helyi repógyökér `/Users/jamborkrisztian/Projects/Kia`.
-- Obsidianban a `/Users/jamborkrisztian/Projects/Kia/docs` mappa külön
-  vaultként megnyitható.
+- Obsidianban a teljes `/Users/jamborkrisztian/Projects/Kia` projektgyökeret
+  nyitjuk meg vaultként, ezért a vault neve `Kia`; a jegyzetek a `docs/`
+  mappában maradnak.
 - A `.obsidian/` felhasználói beállításait egyelőre nem verziókövetjük.
 - Titok, VIN, GPS vagy nyers személyes log nem kerül a tudástárba.
 - A Codex saját generált memóriatárát nem szerkesztjük kézzel; a projekt igaz

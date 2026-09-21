@@ -100,7 +100,8 @@ füsttesztig használható, kipipálható itiner:
 
 ## Projektmemória
 
-A `docs/` könyvtár közvetlenül megnyitható Obsidian vaultként. Tartalmazza
+A teljes `/Users/jamborkrisztian/Projects/Kia` projektgyökér nyitandó meg
+Obsidian vaultként; ennek neve **Kia**. A `docs/` könyvtár tartalmazza
 a fejlesztési ütemezést, a baseline jelentést és az architekturális döntési
 naplókat. Belépési pont: [docs/README.md](docs/README.md).
 

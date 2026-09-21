@@ -1,11 +1,14 @@
 # SnoSoulEV – projektmemória
 
-Ez a könyvtár Obsidian vaultként is megnyitható. A jegyzetek közönséges,
+A teljes `/Users/jamborkrisztian/Projects/Kia` projektgyökér Obsidian
+vaultként nyitandó meg; a vault neve így **Kia**. A `docs/` mappában lévő
+jegyzetek közönséges,
 verziókövetett Markdown-fájlok, ezért GitHubon és bármely szerkesztőben is
 olvashatók.
 
 A projekt kanonikus helyi gyökere: `/Users/jamborkrisztian/Projects/Kia`.
-Az Obsidian vault helye: `/Users/jamborkrisztian/Projects/Kia/docs`.
+Az Obsidian vault helye: `/Users/jamborkrisztian/Projects/Kia`.
+A dokumentáció helye a vaulton belül: `docs/`.
 
 ## Belépési pontok
 
