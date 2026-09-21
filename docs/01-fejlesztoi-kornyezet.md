@@ -1,5 +1,19 @@
 # Fejlesztői környezet
 
+## Projekt helye
+
+A kanonikus helyi repógyökér:
+
+```text
+/Users/jamborkrisztian/Projects/Kia
+```
+
+Minden alábbi parancs előtt lépj ebbe a könyvtárba:
+
+```bash
+cd /Users/jamborkrisztian/Projects/Kia
+```
+
 ## Rögzített baseline
 
 - JDK: 17

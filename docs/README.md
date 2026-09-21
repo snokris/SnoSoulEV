@@ -4,6 +4,9 @@ Ez a könyvtár Obsidian vaultként is megnyitható. A jegyzetek közönséges,
 verziókövetett Markdown-fájlok, ezért GitHubon és bármely szerkesztőben is
 olvashatók.
 
+A projekt kanonikus helyi gyökere: `/Users/jamborkrisztian/Projects/Kia`.
+Az Obsidian vault helye: `/Users/jamborkrisztian/Projects/Kia/docs`.
+
 ## Belépési pontok
 
 - [[01-fejlesztoi-kornyezet]] – telepítés és napi parancsok

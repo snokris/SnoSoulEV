@@ -31,9 +31,11 @@ alkalmazás települ, elindul, navigálható és read-only módon kapcsolódik.
 
 ## 2. Forráskód és környezet ellenőrzése
 
-A repó gyökerében:
+A repó kanonikus helyi gyökere: `/Users/jamborkrisztian/Projects/Kia`.
+A teszt indításakor:
 
 ```bash
+cd /Users/jamborkrisztian/Projects/Kia
 git status --short --branch
 git log -1 --oneline
 scripts/android-env.sh java -version
