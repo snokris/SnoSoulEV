@@ -90,6 +90,10 @@ Android-eszköz vagy emulátor szükséges.
 Részletes telepítési jegyzet:
 [docs/01-fejlesztoi-kornyezet.md](docs/01-fejlesztoi-kornyezet.md).
 
+Az APK előállításától a valós, álló járműves Bluetooth/OBD
+füsttesztig használható, kipipálható itiner:
+[docs/04-tesztelesi-itiner.md](docs/04-tesztelesi-itiner.md).
+
 ## Projektmemória
 
 A `docs/` könyvtár közvetlenül megnyitható Obsidian vaultként. Tartalmazza

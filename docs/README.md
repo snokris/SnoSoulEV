@@ -9,6 +9,8 @@ olvashatók.
 - [[01-fejlesztoi-kornyezet]] – telepítés és napi parancsok
 - [[02-baseline-jelentes]] – a 0. fázis eredménye és fennmaradó kockázatai
 - [[03-utemezes]] – a specifikációból levezetett fázisok
+- [[04-tesztelesi-itiner]] – APK build, telefonos telepítés, offline UI- és
+  álló járműves Bluetooth/OBD füstteszt
 - [[decisions/0001-projektmemoria]] – mi kerül Obsidianba, `AGENTS.md`-be és Gitbe
 - [[decisions/0002-sajat-identitas-es-engedelyek]] – appazonosító,
   Bluetooth- és tárhelydöntések
