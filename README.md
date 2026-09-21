@@ -1,87 +1,112 @@
 # SnoSoulEV
 
-SnoSoulEV is an independent, read-only modernization fork of
-[langemand/SoulEVSpy](https://github.com/langemand/SoulEVSpy). The fork keeps
-the original project history and attribution while the Android platform,
-reliability and diagnostics layers are modernized. Development notes are in
-[`docs/README.md`](docs/README.md).
+Androidos, read-only járműdiagnosztikai alkalmazás Kia és Hyundai elektromos
+autókhoz. A SnoSoulEV a
+[Soul EV Spy](https://github.com/langemand/SoulEVSpy) független modernizációs
+forkja: megőrzi az eredeti projekt történetét és szerzői attribúcióját,
+miközben korszerűsíti az Android-platformot, a tesztelhetőséget és a
+kommunikáció megbízhatóságát.
 
-The current SnoSoulEV build is offline-first: it has no Android Internet
-permission, cloud upload, or bundled charger-station service. Vehicle and
-optional location data remain on the device.
+> [!WARNING]
+> Ez kísérleti diagnosztikai szoftver. Vezetés közben ne kezeld a telefont,
+> és ne hagyatkozz az alkalmazás adataira biztonságkritikus döntésnél.
+> A használat saját felelősségre történik.
 
-## Upstream project description
+## Jelenlegi állapot
 
-Soul EV Spy is an Android application that allows you to read out some useful information out of your 
-Kia or Hyundai EV, that you cannot access using the on-board computer or display.
+Az alap build és az 1. modernizációs fázis elkészült.
 
-STATUS: BETA: Can collect data from car (via a Konnwei KW-902 Bluetooth OBD-II dongle) and phone gps, 
-can retrieve locations of DC quick-chargers, opens Google Maps navigation on click,
-stores data on phone or SD card, displays data values on lists, gps and links to google maps route to chargerlocation.
-No UI fancyness.
+- alkalmazásnév: **SnoSoulEV**;
+- Android application ID: `hu.snokris.snosoulev`;
+- `compileSdk 35`, `targetSdk 35`, `minSdk 16`;
+- Android 12+ Bluetooth runtime jogosultságkezelés;
+- offline-first működés, Android `INTERNET` jogosultság nélkül;
+- nincs felhőfeltöltés vagy beépített töltőállomás-szolgáltatás;
+- helyi adatvédelmi tájékoztató;
+- reprodukálható JDK 17 / Gradle 8.13 / AGP 8.13.2 build;
+- debug APK, instrumentációs teszt-APK és lintellenőrzés előáll.
 
-Works on Kia Soul EV with 27 to 30 kWh battery (2014-2018), and reads some data from on Kia Ray EV, Kia e-Niro, Kia eSoul 2020, Hyundai BlueOn EV, Hyundai Ioniq EV and Hyundai Kona EV.
+A következő fejlesztési lépés az anonimizált log-replay tesztkörnyezet.
+A részletes terv a [projekt ütemezésében](docs/03-utemezes.md) olvasható.
 
-# Informal warning
+## Mit tud az alkalmazás?
 
-Before you download and use this software consider the following:
-You are interfering with your car and doing that with hardware and software beyond your control (and frankly, for
-a large part beyond ours), created by a loose team of interested amateurs in this field. Any car is a possibly
-lethal piece of machinery and you might hurt or kill yourself or others using it, or even paying attention to
-the displays instead of watching the road. Be extremely prudent!
+A telefonhoz párosított Bluetooth OBD-II adapteren keresztül olvas
+diagnosztikai adatokat, majd többek között az energia-, akkumulátor-,
+cellafeszültség-, fedélzeti töltő-, motorvezérlés-, keréknyomás- és
+GPS-nézetekben jeleníti meg azokat.
 
-By even downloading this software, or the source code provided on GitHub, you agree to completely understand this.
+A kódbázis a következő örökölt járműprofilokat tartalmazza:
 
-Get it from Google Play Store: 
+- Kia Soul EV 2015–2019;
+- Kia Ray EV;
+- Kia e-Niro;
+- Kia e-Soul 2020–;
+- Hyundai BlueOn EV;
+- Hyundai Ioniq EV;
+- Hyundai Kona EV;
+- monitor mód.
 
-https://play.google.com/store/apps/details?id=com.evranger.soulevspy
+Ezek nem mindegyike rendelkezik azonos lefedettségű, valós hardveren
+ellenőrzött támogatással. Az elsődleges cél a 27 és 30 kWh-s Kia Soul EV
+profilok megbízható elkülönítése.
 
-If you try this app in your car, I will appreciate an email with the log-files and csv-files (they are in the Download dir, either in Internal Storage, or on the SD card), along with info on car model, trim and year, which dongle you used, and your thoughts of the app, errors or suggestions for improvement. Send the email to soulspy@evranger.com.
+## Adatvédelem és biztonság
 
-Older APKs for manual install are all outdated: 
+- A járműkommunikáció read-only marad: nincs ECU-írás, kódolás,
+  vezérlés vagy hibakódtörlés.
+- Az alkalmazás nem kér internet-hozzáférést, és nem továbbít
+  jármű-, Bluetooth- vagy helyadatot online szolgáltatásnak.
+- VIN, GPS-koordináta, adapterazonosító vagy nyers felhasználói napló nem
+  kerülhet a repóba. Tesztadat csak anonimizálva használható.
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.6-3250-debug.apk
+## Fejlesztői környezet
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.6-3147-debug.apk
+macOS/Homebrew esetén:
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-3002-debug.apk
+```bash
+brew install openjdk@17 android-commandlinetools
+JAVA_HOME=/opt/homebrew/opt/openjdk@17 sdkmanager --licenses
+JAVA_HOME=/opt/homebrew/opt/openjdk@17 sdkmanager \
+  'platform-tools' 'platforms;android-35' 'build-tools;35.0.0'
+```
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2999-debug.apk
+A repó klónozása után a teljes automatizált ellenőrzés:
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2912-debug.apk
+```bash
+scripts/verify-baseline.sh
+```
 
-Deprecated due to battery cell map non-functional: http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2906-debug.apk
+Csak a debug APK elkészítése:
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2899-debug.apk
+```bash
+scripts/android-env.sh ./gradlew --no-daemon :app:assembleDebug
+```
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2888-debug.apk
+Az APK az `app/build/outputs/apk/debug/` könyvtárba kerül. Az
+instrumentációs tesztek lefordítása nem jelenti azok futtatását; ehhez valós
+Android-eszköz vagy emulátor szükséges.
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2882-debug.apk
+Részletes telepítési jegyzet:
+[docs/01-fejlesztoi-kornyezet.md](docs/01-fejlesztoi-kornyezet.md).
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2871-debug.apk
+## Projektmemória
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2844-debug.apk
+A `docs/` könyvtár közvetlenül megnyitható Obsidian vaultként. Tartalmazza
+a fejlesztési ütemezést, a baseline jelentést és az architekturális döntési
+naplókat. Belépési pont: [docs/README.md](docs/README.md).
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.3-2803-debug.apk
+## Fejlesztési szabályok
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.2-2732-debug.apk
+- A változtatások legyenek kicsik, ellenőrizhetők és fázisonként
+  elkülönítettek.
+- Build jellegű változtatás után fusson a `scripts/verify-baseline.sh`.
+- A README és a `docs/` projektmemória minden felhasználót vagy
+  fejlesztőt érintő változással együtt frissítendő.
+- A licencet és az upstream attribúciót meg kell őrizni.
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.2-2652-debug.apk
+## Licenc és attribúció
 
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.2-2629-debug.apk
-
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.2-2623-debug.apk
-
-http://spjeldager.dk/elbil/SoulEVSpy-0.1.2-2619-debug.apk
-
-http://spjeldager.dk/elbil/app-debug-1780.apk
-
-# Formal disclaimer
-
-SOUL EV SPY (“THE SOFTWARE”) IS PROVIDED AS IS. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS MAKE NO WARRANTIES AS TO
-PERFORMANCE OR FITNESS FOR A PARTICULAR PURPOSE, OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED. NO ORAL OR
-WRITTEN COMMUNICATION FROM OR INFORMATION PROVIDED BY THE AUTHORS SHALL CREATE A WARRANTY. UNDER NO CIRCUMSTANCES
-SHALL THE AUTHORS BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES RESULTING FROM THE
-USE, MISUSE, OR INABILITY TO USE THE SOFTWARE, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
-DAMAGES. THESE EXCLUSIONS AND LIMITATIONS MAY NOT APPLY IN ALL JURISDICTIONS. YOU MAY HAVE ADDITIONAL RIGHTS AND
-SOME OF THESE LIMITATIONS MAY NOT APPLY TO YOU. THIS SOFTWARE IS ONLY INTENDED FOR SCIENTIFIC USAGE.
+A projekt az eredeti Soul EV Spy munkájára épül, és az Apache License 2.0
+feltételei szerint használható. Lásd a [LICENSE](LICENSE) fájlt és az
+upstream projekt szerzői előzményeit.

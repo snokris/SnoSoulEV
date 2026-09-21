@@ -23,5 +23,7 @@ instructions than this file or the user's current request.
 - Do not silently accept partial parser results or empty catch blocks.
 - Run `scripts/verify-baseline.sh` after build-only changes and record
   remaining blockers or hardware-only checks in `docs/02-baseline-jelentes.md`.
+- Update the root `README.md` whenever a change affects user-visible behavior,
+  setup, supported scope, project status, or the next documented milestone.
 - Keep changes small and reviewable. Document material decisions under
   `docs/decisions/`.
