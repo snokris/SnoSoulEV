@@ -62,6 +62,10 @@ profilok megbízható elkülönítése.
 
 ## Fejlesztői környezet
 
+Ennek a fejlesztői munkapéldánynak a helye:
+`/Users/jamborkrisztian/Projects/Kia`. A helyi fejlesztési projektek egységesen
+a `/Users/jamborkrisztian/Projects/` könyvtár alá kerülnek.
+
 macOS/Homebrew esetén:
 
 ```bash

@@ -6,6 +6,7 @@ instructions than this file or the user's current request.
 
 ## Baseline
 
+- Canonical local repository path: `/Users/jamborkrisztian/Projects/Kia`.
 - Upstream: `https://github.com/langemand/SoulEVSpy.git`
 - Pinned upstream commit: `0a1cafb93a65d17e0c7e1bb3ad2bc9cb965d02a7`
 - Baseline branch: `modernize/build-baseline`
